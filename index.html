@@ -1,28 +1,529 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>VISTA</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style/index.css">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+<html lang="en">
 
-        <!--<img id="image-tools" src="images/tools.svg">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-0G1CYNZY6S"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-        <h1>This site is currently under construction. Please check back later</h1>
+      gtag('config', 'G-0G1CYNZY6S');
+    </script> -->
+  <title>VISTA</title>
+  <link rel="icon" href="images/VISTA-logo.png" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--[if lte IE 8
+      ]><script src="assets/js/ie/html5shiv.js"></script
+    ><![endif]-->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css" />
+  <script type="text/javascript" src="assets/js/ics.js"></script>
+  </script>
 
-        <img id="image-vista-logo" src="images/Vista-x-UCM.svg" />-->
+</head>
 
-        <script src="" async defer></script> <!--Branch testing-->
-    </body>
+<body class="homepage">
+  <!-- 
+        #########################################################################################
+        # Are you a web developer for CITRIS? Looking to make modifications to this site?       #
+        #                                                                                       #
+        # Contact Brian Hungerman (brianhungerman@gmail.com) if you have any questions/concerns #
+        #                                                                                       #
+        # Please read README before making additions                                            #
+        #########################################################################################
+    -->
+
+  <!-- IF SITE IS UNDER CONSTRUCTION, UNCOMMENT THE FOLLOWING DIV -->
+
+  <!-- <div
+        style="position:fixed;width:500px;height:40px;left:-100px;top:60px; transform: rotate(-45deg);z-index:10000;background-color:lightcoral;">
+        <h2 style="color:white;">&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Site under construction!</h2>
+    </div> -->
+
+  <div id="page-wrapper">
+    <!-- <header id="header">
+      <div class="logo container">
+        <div>
+          <h1 id="logo">CITRIS @ UC Merced</h1>
+        </div>
+      </div>
+    </header> -->
+
+    <!-- NAVIGATION: Controlled by HTML snippet in snippets/nav.html -->
+    <nav id="nav"></nav>
+    <!-- <div style="position: absolute; z-index:10;">
+      <h1>Welcome to CITRIS UC Merced</h1>
+    </div> -->
+    <div class="wrapper2">
+      <div class="textwrapper">
+        <h2 class="textinside">Welcome to CITRIS at University of California, MERCED</h2>
+      </div>
+      <div class="slideshows">
+        <div class="slideshow slideshow--hero">
+          <div class="slides">
+            <div id="slide1" class="slide slide1"></div>
+            <div id="slide2" class="slide slide2"></div>
+            <div id="slide3" class="slide slide3"></div>
+          </div>
+        </div>
+        <div class="slideshow slideshow--contrast slideshow--contrast--before">
+          <div class="slides">
+            <div id="slide1contrast" class="slide slide1"></div>
+            <div id="slide2contrast" class="slide slide2"></div>
+            <div id="slide3contrast" class="slide slide3"></div>
+          </div>
+        </div>
+        <div class="slideshow slideshow--contrast slideshow--contrast--after">
+          <div class="slides">
+            <div id="slide1contrastafter" class="slide slide1"></div>
+            <div id="slide2contrastafter" class="slide slide2"></div>
+            <div id="slide3contrastafter" class="slide slide3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+
+
+    <!-- Banner -->
+    <!-- <div id="banner-wrapper">
+      <section id="banner">
+        
+        <h2 id="banner-title" style="font-size:150%;">
+          Welcome to CITRIS at University of California, MERCED
+        </h2>
+
+        <a id="banner-link" href="#about" class="button">Learn More</a>
+      </section>
+    </div> -->
+
+    
+
+
+    <div id="main-wrapper">
+      <header id="header" style="margin-bottom: -50px;">
+        <div class="logo container">
+            <div>
+                <h1 id="logo">About Us</h1>
+            </div>
+        </div>
+      </header>
+      <div id="main" class="container grid2">
+        <div class="row 200%">
+          <div class="12u mainleft">
+            
+            <!-- RECENT NEWS: Controlled by HTML snippet in snippets/recent-news.html -->
+
+            <!-- <aside>
+                <h2 class="major facebook">
+                <span>Facebook</span>
+                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
+                <div id="facehook" class="fbwidget">
+                  <div class="fb-page" data-href="https://www.facebook.com/citris-ucmerced" data-tabs="timeline,events" data-width="" data-height="" 
+                  data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote 
+                  cite="https://www.facebook.com/citris-ucmerced" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/citris-ucmerced">
+                    CITRIS-UCMerced</a></blockquote></div>
+                </div>
+              </h2>
+
+              </aside> -->
+            <div>
+              <div id="about" class="container">
+                <div class="row">
+                  <div class="12u">
+                    <div class="content">
+                      <article class="box page-content">
+                        <!-- <header>
+                          <span class="image featured">
+                            <img src="images/logo.png" alt="" />
+                          </span><br>
+                          <p>Center for Information Technology Research in the Interest of Society and the
+                            Banatao Institute at University of California, Merced
+                          </p>
+                        </header>
+                        <br> -->
+
+                        <section>
+                          <div class="blog-card">
+                            <div class="meta">
+                              <div class="photo" style="background-image: url(images/banners/banner.jpg)"></div>
+                            </div>
+                            <div class="description">
+                              <h1>Who</h1>
+                              <p>
+                                The Center for Information Technology Research in the Interest of Society (<a href="citris-uc.org" target="_blank">CITRIS</a>) is a fully-functioning
+                                research unit with the University of California, Merced
+                                and is recognized as one of the four CITRIS campuses:
+                                <a href="http://citris.ucmerced.edu/about">UC Merced</a>,
+                                <a href="http://citris-uc.org/campus/uc-berkeley/">UC Berkeley</a>,
+                                <a href="http://citris-uc.org/campus/uc-davis/">UC Davis</a>, and
+                                <a href="http://citris-uc.org/campus/uc-santa-cruz/">UC Santa Cruz</a>.
+                                CITRIS develops synergistic partnerships with academic institutions and corporate collaborators worldwide
+                                to collectively produce innovative solutions to challenges in four primary sectors.
+                            </p>
+                            <p>CITRIS at UC Merced addresses California's most pressing societal and environmental problems by leveraging
+                                cutting-edge technologies and incorporating a convergence of <a
+                                    href="http://citris.ucmerced.edu/projects">student-driven initiatives</a>, <a
+                                    href="http://citris.ucmerced.edu/seed-grants">seed grants &amp; faculty research</a>, and corporate
+                                partnerships.</p>
+                            <p class="read-more">
+                              <a class="button" href="/people" target="_blank">Meet Our Staff</a>
+                            </p>
+                            </div>
+                          </div>
+                          <div class="blog-card alt alt-blog-card">
+                            <div class="meta">
+                              <div class="photo" style="background-image: url(images/buildings/sreC.jpg)"></div>
+                            </div>
+                            <div class="description">
+                              <h1>What</h1>
+                              <p>
+                                As an established Institute of Science and Innovation, CITRIS is a research and
+                                outreach enterprise within the School of Engineering at University of California
+                                Merced.
+                              </p>
+                              <p>
+                                CITRIS UCM addresses California's most pressing societal and environmental
+                                problems by leveraging cutting-edge technologies, developing novel research, and
+                                conducting inspiring outreach: <a href="/student-programs.html" target="_blank">
+                                  Student-Driven Initiatives</a>, Seed Grants & Faculty Research, and
+                                developing community, educational and industry partnerships.
+                              </p>
+                              <p class="read-more">
+                                <a class="button" href="/annual_reports" target="_blank">Annual Reports</a>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="blog-card">
+                            <div class="meta">
+                              <div class="photo" style="background-image: url(images/about_banner.jpg)"></div>
+                            </div>
+                            <div class="description">
+                              <h1>Where</h1>
+                              <p>
+                                Established in 2005, University of California’s newest campus is also the first
+                                American research university of the 21st Century. UC Merced has exceeded all
+                                expectations: reaching R2 status faster than any other campus, achieving carbon
+                                neutrality through investment in sustainability in every facet of life, and
+                                rapidly growing to educate 9,000 undergraduate and graduate students.
+                              </p>
+                              <p>
+                                By being a member of the San Joaquin Valley community and serving as a
+                                representation of innovation, technology, and entrepreneurship in the heart of
+                                the state of California, UC Merced strives to deliver solutions to local and
+                                global problems.
+                              </p>
+                              <p>
+                                At UC Merced, learning goes beyond textbooks and classrooms. Students gain
+                                hands-on experience through programs like Tech for Social Good and Innovate to
+                                Grow , where they apply team-based leadership skills to real-world projects.
+                              </p>
+                              <p class="read-more">
+                                <a class="button" href="location" target="_blank">Our Location</a>
+                              </p>
+                            </div>
+                          </div>
+
+                          <!-- <span class="image featured">
+                            <img src="images/buildings/sreC.jpg" alt="" />
+                          </span>
+                          <p>
+                            As an established Institute of Science and Innovation, CITRIS is a research and
+                            outreach enterprise within the School of Engineering at University of California
+                            Merced.
+                          </p>
+                          <p>
+                            CITRIS UCM addresses California's most pressing societal and environmental
+                            problems by leveraging cutting-edge technologies, developing novel research, and
+                            conducting inspiring outreach: <a href="/student-programs.html" target="_blank">
+                              Student-Driven Initiatives</a>, Seed Grants & Faculty Research, and
+                            developing community, educational and industry partnerships.
+                          </p> -->
+                        </section>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="margin-bottom: 35px;" class="row 200%">
+              <div style="margin-top: -50px;" class="12u">
+                <!-- WHO WE ARE: Controlled by HTML snippet in snippets/who-we-are.html -->
+                <!-- <div id="who-we-are"></div> -->
+              </div>
+            </div>
+
+            <h2 class="major">
+              <span>Our Programs</span>
+            </h2>
+            <section>
+            <div class="blog-slider">
+              <div class="blog-slider__wrp swiper-wrapper">
+
+                <div class="blog-slider__item swiper-slide">
+                  <div class="blog-slider__img">
+                    <img src="/images/programs/ag-food-tech-logo.jpg" alt="ag food tech logo">
+                  </div>
+                  <div class="blog-slider__content">
+                    <div class="blog-slider__title">Ag-Food-Tech</div>
+                    <div class="blog-slider__text">Ag-Food-Tech is an emergent strength of UC Merced's faculty, with representation of experts from across the campus. Faculty address many aspects of production and adapt tools for food processing, contributing to many different production systems and California's diversity of over 400 crops.</div>
+                    <a href="/ag-food-tech" target="_blank" class="blog-slider__button">READ MORE</a>
+                  </div>
+                </div>
+
+                <div class="blog-slider__item swiper-slide">
+                  <div class="blog-slider__img">
+                    <img src="/images/programs/Edge-in-Tech_Secondary-Logo_Vertical.jpg" alt="Edge in Tech Logo">
+                  </div>
+                  <div class="blog-slider__content">
+                    <div class="blog-slider__title">EDGE in Tech Initiative</div>
+                    <div class="blog-slider__text">The EDGE in Tech Initiative at the University of California (EDGE in Tech) is committed to addressing the challenges faced by women and other under-included identities in engineering and computer science fields by serving as a trusted center and resource that integrates research with action.</div>
+                    <a href="/EDGE" target="_blank" class="blog-slider__button">READ MORE</a>
+                  </div>
+                </div>
+
+                <div class="blog-slider__item swiper-slide">
+                  <div class="blog-slider__img">
+                    <img src="/images/programs/techforsocialgood-templogo.jpg" alt="tech for social good logo">
+                  </div>
+                  <div class="blog-slider__content">
+                    <div class="blog-slider__title">Tech for Social Good</div>
+                    <div class="blog-slider__text">The CITRIS TensorFlow for Social Good program, funded by Google Research, is designed to give undergraduate students a start in TensorFlow, Machine Learning; build camaraderie and teamwork, and add a project to their resumes while developing something of use to society.</div>
+                    <a href="/tsg" target="_blank" class="blog-slider__button">READ MORE</a>
+                  </div>
+                </div>
+
+                <div class="blog-slider__item swiper-slide">
+                  <div class="blog-slider__img">
+                    <img src="/images/programs/nextech-logo.jpg" alt="next tech logo">
+                  </div>
+                  <div class="blog-slider__content">
+                    <div class="blog-slider__title">NexTech</div>
+                    <div class="blog-slider__text">NexTech inspires middle school students about STEM. It brings an innovative and fun tech curriculum in order to introduce programming, engineering problem-solving and team science, along with helping them develop a sense of identity in STEM. UC Merced students take on the role of NexTech educators and guide the middle school students through building several versions of robots and puzzles. Students can see themselves succeeding in technology after exploring NexTech Robotics.</div>
+                    <a href="/nextech" target="_blank" class="blog-slider__button">READ MORE</a>
+                  </div>
+                </div>
+
+                <div class="blog-slider__item swiper-slide">
+                  <div class="blog-slider__img">
+                    <img src="/images/programs/studentprograms-logo.jpg" alt="student programs logo">
+                  </div>
+                  <div class="blog-slider__content">
+                    <div class="blog-slider__title">Student Programs</div>
+                    <div class="blog-slider__text">CITRIS strives to provide undergraduate students with an opportunity for self-directed learning, and professional development within a higher education institutional context. These activities serve to develop awareness about professional development options in order for students to develop career pathways and set goals.</div>
+                    <a href="/student-programs" target="_blank" class="blog-slider__button">READ MORE</a>
+                  </div>
+                </div>
+
+              </div>
+              <div class="blog-slider__pagination"></div>
+            </div>
+          </section>
+            <h2 class="major">
+              <span>Recent News and Upcoming Events</span>
+            </h2>
+            <section id="events"> <center><div style="margin-bottom: 50px; margin-top: -25px;"id="news"></div></center></section>
+
+            <!-- <section>
+              <a href=/contact target="_blank">
+                <h3>Contact Us</h3>
+              </a>
+              <p>
+                Feel free to contact us at <a href="mailto:citris@ucmerced.edu">
+                  citris@ucmerced.edu
+                </a>. Our office is located on the
+                third floor of the Sustainability Research and Engineering. The full address is:
+              </p>
+              <p>
+                University of California, Merced
+                <br /> 5200 North Lake Road
+                <br /> SRE 311
+                <br /> Merced, California 95340
+              </p>
+            </section> -->
+            <center>
+              <section>
+                <h2 class="major">
+                  <span>CITRIS Live Twitter</span>
+                </h2>
+                <a class="twitter-timeline" data-width="500" data-height="500"
+                  href="https://twitter.com/citris_ucmerced">Tweets by
+                  citris_ucmerced</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+              </section>
+            </center>
+
+
+          </div>
+        </div>
+
+
+        
+        <!-- <div class="row 200%">
+          <div class="12u">
+            <h2 class="major">
+              <span>Calendar</span>
+            </h2>
+            <div class="container-video">
+              <iframe class="responsive-iframe"
+                src="https://outlook.office365.com/owa/calendar/052188e02f6a4028bf55e1278cdb368c@ucmerced.edu/d37c6eb522ce413b91f5b97efdcc3fc714692294540219387417/calendar.html"
+                scrolling="no" width="100%" height="700px">
+              </iframe>
+            </div>
+          </div>
+        </div> -->
+
+      </div>
+    </div>
+
+    <!-- FOOTER: Controlled by HTML snippet in snippets/footer.html-->
+    <div id="footer"></div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.dropotron.min.js"></script>
+  <script src="/assets/js/jquery.csv.min.js"></script>
+  <script src="assets/js/skel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+  <script src="assets/js/skel-viewport.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/slider.js"></script>
+  <script src="assets/js/slideshow.js"></script>
+  <script src="assets/js/event-populator.js"></script>
+  <!--[if lte IE 8
+      ]><script src="assets/js/ie/respond.min.js"></script
+    ><![endif]-->
+  <script src="assets/js/main.js"></script>
+  <script>
+
+    //Calendar
+    function toggleDropdown(ID) {
+      document.getElementById(ID).classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function (event) {
+      if (!event.target.matches(".dropbtn")) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (let i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains("show")) {
+            openDropdown.classList.remove("show");
+          }
+        }
+      }
+    };
+
+    function generateICSFile(title, description) {
+      let calEntry = icsFormatter();
+
+      let event = {
+        title,
+        description,
+        location: "University of California, Merced"
+      }
+
+      var begin = Date.now();
+      var end = new Date(begin + 30 * 60000);
+
+      calEntry.addEvent(
+        event.title,
+        event.description,
+        event.location,
+        begin,
+        end
+      );
+      console.log(event);
+      calEntry.download((event.title).toString());
+    }
+
+
+    $(function () {
+      $("#nav").load("snippets/nav.html"); /*Navigation: Controlled by HTML snippet in snippets/nav.html*/
+      $("#navPanel").load("snippets/nav.html"); /*Navigation: Controlled by HTML snippet in snippets/nav.html*/
+
+      $("#who-we-are").load(
+        "snippets/who-we-are.html"
+      ); /*WHO WE ARE: Controlled by HTML snippet in snippets/who-we-are.html*/
+      $("#initiatives").load(
+        "snippets/initiatives.html"
+      ); /*INITIATIVES: Controlled by HTML snippet in snippets/initiatives.html*/
+      $("#recent-news").load(
+        "snippets/recent-news.html"
+      ); /*RECENT NEWS: Controlled by HTML snippet in snippets/recent-news.html*/
+      $("#footer").load(
+        "snippets/footer.html"
+      ); /*FOOTER: Controlled by HTML snippet in snippets/footer.html*/
+
+      //events populated by event-populator.js
+      populateEvents($("#events"), true);
+
+      $.get("/news.csv").then(function (text, status, xhr) {
+        var data = $.csv.toObjects(text);
+        // for (var i = 0; i < data.length; i++) {
+        for (var i = 0; i < 3; i++) {
+          if (data[i].ID.substring(0, 2) != "//")
+            switch (data[i].ID) {
+              default:
+                var url = new URL(data[i].LINK);
+                $("#news").append(
+                  $.parseHTML(
+                    '<figure class="news">' +
+                    '<div>' + (((data[i].ID).toString() === '') ? '<img src="images/favicon.png" alt="" class="news-card__image">' :
+                      '<img src="images/news/' + data[i].ID + '.jpg" alt="">') +
+                    '</div>' +
+                    '<figcaption>' +
+                    '<h3>' + data[i].TITLE + (url.hostname == "citris.ucmerced.edu"? "":" &#10697") + '</h3>' +
+                    '<p>' + data[i].DESCRIPTION + '</p>' +
+                    '</figcaption>' +
+                    '<footer>' +
+                    '<div><i</i>' + data[i].DATE + '</div>' +
+                    '</footer><a href="' + data[i].LINK + ' " target="_blank"></a>' +
+                    '</figure>'
+                  )
+                );
+                break;
+            }
+        }
+      });
+    });
+  </script>
+  <script>
+    var lines = "";
+    var line_image = [];
+    var line_text = [];
+    var line_link = [];
+    var slide_count = 0;
+    $.get(
+      "images/banners/items.txt",
+      function (data) {
+        lines = data.split("\n");
+        for (var i = 0; i < lines.length; i++) {
+          line_image[i] = lines[i].split(";")[0];
+          line_text[i] = lines[i].split(";")[1];
+          line_link[i] = lines[i].split(";")[2];
+        }
+        setInterval(function () {
+          document.getElementById("banner-wrapper").style.backgroundImage =
+            "url('assets/css/images/overlay1.png'), url('assets/css/images/overlay1.png'), url('images/banners/" +
+            line_image[slide_count] +
+            ".jpg')";
+          document.getElementById("banner-title").innerText =
+            line_text[slide_count];
+          document.getElementById("banner-link").href =
+            line_link[slide_count];
+          slide_count++;
+          if (slide_count >= lines.length) slide_count = 0;
+        }, 5000);
+      },
+      "text"
+    );
+  </script>
+</body>
+
 </html>

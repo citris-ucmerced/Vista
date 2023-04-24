@@ -1,0 +1,329 @@
+@charset "utf8";
+@import url(https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap);
+
+:root {
+  font-size: calc(1vw + 1vh);
+  --bgColor: #ffffff;
+  --mainColor: #4D82B7;
+  --linkColor: orange;
+}
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+}
+.timeline h4{
+    margin: 0;
+}
+
+.timeline {
+	position: relative;
+	display: grid;
+	gap: 40px;
+	max-width: 75%;
+	list-style-type: none;
+	}
+
+.timeline .timeline__line {
+	position: absolute;
+	top: 0px;
+	left: .4rem;
+	width: .3em;
+	height: 100%;
+	background: var(--mainColor);
+	}
+
+.timeline .timeline__item .info {
+	display: grid;
+	grid-template-columns: repeat(3, auto) 1fr;
+	align-items: center;
+	gap: 0.25rem;
+	}
+
+.timeline .timeline__item .info a {
+	text-decoration: none;
+	color: var(--linkColor);
+  font: 300 16px "Oswald", sans-serif;
+	}
+
+.timeline .timeline__item .info .dot {
+	position: relative;
+	width: 1rem;
+	height: 1rem;
+	border-radius: 50%;
+	}
+
+.timeline .timeline__item .info .dot::before {
+	position: absolute;
+	content: "";
+	top: -.25rem;
+	left: -.25rem;
+	right: -.25rem;
+	bottom: -.25rem;
+	background-color: var(--bgColor);
+  border-radius: inherit;
+	}
+
+.timeline .timeline__item .info .dot::after {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 1rem;
+	height: 1rem;
+	border: .25rem solid var(--mainColor);
+	border-radius: inherit;
+	}
+
+.timeline .timeline__item .info .time {
+  margin-right: .5rem;
+}
+
+.timeline .timeline__item .content {
+	margin: 1rem 0 0 3.5rem;
+}
+
+
+.faq-header{
+  border-bottom: 1px dotted #ccc;
+  padding: 24px;
+}
+
+.faq-content {
+  margin: 0 auto;
+}
+
+.faq-question {
+  padding: 20px 0;
+  border-bottom: 1px dotted #ccc;
+}
+
+.panel-title {
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 10px 10px 0 48px;
+  display: block;
+  cursor: pointer;
+}
+
+.panel-content {
+  padding: 0px 14px;
+  margin: 0 40px;
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  opacity: 0;
+  -webkit-transition: .4s ease;
+  -moz-transition: .4s ease;
+  -o-transition: .4s ease;
+  transition: .4s ease;
+}
+
+.panel:checked ~ .panel-content{
+  height: auto;
+  opacity: 1;
+  padding: 14px;
+}
+
+.plus {
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 4px;
+  z-index: 5;
+  font-size: 42px;
+  line-height: 100%;
+  -webkit-user-select: none;    
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-transition: .2s ease;
+  -moz-transition: .2s ease;
+  -o-transition: .2s ease;
+  transition: .2s ease;
+}
+
+.panel:checked ~ .plus {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.panel {
+  display: none;
+}
+
+/* Prizes */
+.wrapper {
+  margin: 5em auto;
+  max-width: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.06);
+}
+
+.header {
+  padding: 30px 30px 0;
+  text-align: center;
+}
+.header__title {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  font-weight: 500;
+  line-height: 1.1;
+}
+.header__subtitle {
+  margin: 0;
+  font-size: 1.5em;
+  color: #949fb0;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.cards {
+  padding: 15px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.card {
+  margin: 15px;
+  width: calc((100% / 4) - 30px);
+  transition: all 0.2s ease-in-out;
+}
+@media screen and (max-width: 991px) {
+  .card {
+    width: calc((100% / 2) - 30px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .card {
+    width: 100%;
+  }
+}
+.card:hover .card__inner {
+  background-color: #4D82B7;
+  transform: scale(1.05);
+}
+.card__inner {
+  width: 100%;
+  padding: 30px;
+  position: relative;
+  cursor: pointer;
+  background-color: #949fb0;
+  color: #eceef1;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+.card__inner:after {
+  transition: all 0.3s ease-in-out;
+}
+.card__inner .fa {
+  width: 100%;
+  margin-top: 0.25em;
+}
+.card__expander {
+  transition: all 0.2s ease-in-out;
+  background-color: #798290;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  padding: 1em;
+  color: #eceef1;
+  /* font-size: 1.5em; */
+}
+.card__expander .fa {
+  font-size: 0.75em;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+.card__expander .fa:hover {
+  opacity: 0.9;
+}
+.card.is-collapsed .card__inner:after {
+  content: "";
+  opacity: 0;
+}
+.card.is-collapsed .card__expander {
+  max-height: 0;
+  min-height: 0;
+  overflow: hidden;
+  margin-top: 0;
+  opacity: 0;
+}
+.card.is-expanded .card__inner {
+  background-color: #4D82B7;
+}
+.card.is-expanded .card__inner:after {
+  content: "";
+  opacity: 1;
+  display: block;
+  height: 0;
+  width: 0;
+  position: absolute;
+  bottom: -30px;
+  left: calc(50% - 15px);
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #798290;
+}
+.fa-close:before {
+  content: "\f00d";
+}
+.card.is-expanded .card__expander {
+  max-height: 1000px;
+  min-height: 200px;
+  overflow: visible;
+  margin-top: 29px;
+  opacity: 1;
+}
+.card.is-expanded:hover .card__inner {
+  transform: scale(1);
+}
+.card.is-inactive .card__inner {
+  pointer-events: none;
+  opacity: 0.5;
+}
+.card.is-inactive:hover .card__inner {
+  background-color: #949fb0;
+  transform: scale(1);
+}
+
+@media screen and (min-width: 992px) {
+  .card:nth-of-type(4n+2) .card__expander {
+    margin-left: calc(-100% - 30px);
+  }
+
+  .card:nth-of-type(4n+3) .card__expander {
+    margin-left: calc(-200% - 60px);
+  }
+  .card:nth-of-type(4n+4) .card__expander {
+    margin-left: calc(-300% - 90px);
+  }
+  .card:nth-of-type(4n+5) {
+    clear: left;
+  }
+
+  .card__expander {
+    width: calc(400% + 90px);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .card:nth-of-type(2n+2) .card__expander {
+    margin-left: calc(-100% - 30px);
+  }
+
+  .card:nth-of-type(2n+3) {
+    clear: left;
+  }
+
+  .card__expander {
+    width: calc(200% + 30px);
+  }
+}
