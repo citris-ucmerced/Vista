@@ -1,7 +1,7 @@
 /* @import url("font-awesome.min.css"); */
 @import url("all.css");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic|Open+Sans+Condensed:700");
-
+/*@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic|Open+Sans+Condensed:700");*/
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
 /*
 	TXT by HTML5 UP
 	html5up.net | @ajlkn
@@ -2175,7 +2175,7 @@ div#FAQ ol ol li{
 
 	body {
 		background: #f2f5f3;
-		font-family: 'Open Sans', sans-serif;
+		font-family: 'PT Sans', sans-serif;
 		font-weight: 400;
 		color: #6b7770;
 		font-size: 11.5pt;
@@ -2194,7 +2194,7 @@ div#FAQ ol ol li{
 		}
 
 	input, textarea, select {
-		font-family: 'Open Sans', sans-serif;
+		font-family: 'PT Sans', sans-serif;
 		font-weight: 400;
 		color: #6b7770;
 		font-size: 11.5pt;
@@ -2202,7 +2202,7 @@ div#FAQ ol ol li{
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		font-family: 'Open Sans Condensed', sans-serif;
+		font-family: 'PT Sans', sans-serif;
 		font-weight: 700;
 		text-transform: uppercase;
 		color: #6b7770;
@@ -3171,7 +3171,7 @@ div#FAQ ol ol li{
 				left: 0;
 				z-index: 1000;
 				background-color: rgba(255, 255, 255, 0.95);
-				background-image: url("images/overlay.png");
+				/*background-image: url("images/overlay.png");*/
 				width: 100%;
 				height: 3.25em;
 				line-height: 3.25em;
@@ -3211,7 +3211,7 @@ div#FAQ ol ol li{
 						position: relative;
 						display: block;
 						text-decoration: none;
-						color: #6b7770;
+						color: #1b6883;
 						top: -6px;
 						padding: 6px 1.5em 0.25em 1.5em;
 						border-bottom-left-radius: 6px;
@@ -3224,12 +3224,12 @@ div#FAQ ol ol li{
 					}
 
 					#nav li:hover a, #nav li:hover span {
-						background: #C1CAC5;
+						background: #daa900;
 						color: #fff;
 					}
 
 					#nav li.active a, #nav li.active span {
-						background: #C1CAC5;
+						background: #daa900;
 						color: #fff;
 					}
 
@@ -3239,7 +3239,7 @@ div#FAQ ol ol li{
 					}
 
 			.dropotron {
-				background: #6B7770;
+				background: #daa900;
 				color: #fff;
 				border-radius: 6px;
 				line-height: 2.75em;
@@ -3256,19 +3256,19 @@ div#FAQ ol ol li{
 
 				.dropotron li > a, .dropotron li > span {
 					display: block;
-					color: #D7DAD8;
+					color: #fff;
 					text-decoration: none;
 					padding: 0 1.25em;
 				}
 
 				.dropotron li:hover > a, .dropotron li:hover > span {
 					color: #fff;
-					background: #7B8780;
+					background: #1b6883;
 				}
 
 				.dropotron li.active > a, .dropotron li.active > span {
 					color: #fff;
-					background: #7B8780;
+					background: #daa900;
 				}
 
 				.dropotron li:first-child {
@@ -3286,7 +3286,7 @@ div#FAQ ol ol li{
 						left: 50%;
 						margin-left: -1em;
 						top: -0.65em;
-						border-bottom: solid 1em #6B7770;
+						border-bottom: solid 1em #daa900;
 						border-left: solid 1em transparent;
 						border-right: solid 1em transparent;
 					}
