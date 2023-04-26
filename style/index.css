@@ -26,12 +26,15 @@ h1 {
 }
 
 .indexbanner{
+    z-index: 0;
     margin: 0px;
-    width: 100%;
-    max-height: 70vh;
-    height: 70vh;
-    position:relative;
+    width: 100vw;
+    max-width: 100%;
+    height: 85vh;
     padding-bottom: 1%;
+    background-image: linear-gradient(transparent 50%, #0e2c53), url("../images/CacheValleyVB-results_91533_49800.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .bannerimg{
@@ -41,15 +44,7 @@ h1 {
     justify-content: center;
     width: 100vw;
     max-width: 100%;
-}
-
-.easein{
-    opacity: 0;
-    transition: all 3s ease;
-    -webkit-transition: all 3s ease;
-    -moz-transition: all 3s ease;
-    -ms-transition: all 3s ease;
-    -o-transition: all 3s ease;
+    z-index: 1;
 }
 
 .indexcontent{
@@ -57,7 +52,7 @@ h1 {
     background-color: #0e2c53;
     width: 100%;
     max-width: 100%;
-    height: 26vh;
+    height: 20vh;
     display: inline-block;
     top:-10rem;
     display: flex;

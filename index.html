@@ -25,13 +25,11 @@
         <img id="image-vista-logo" src="images/Vista-x-UCM.svg" />-->
         <nav id="nav"></nav>
         <div class="indexbanner">
-            <div class="bannerimg" style="z-index: 1; top:6rem;"><img class="easein" onload="this.style.opacity=1" width="20%" height="20%" src="images\VISTA_Logo_Final_Vertical_Extended-PNG_Mono_White.png"></div>
-            <div class="bannerimg" style="z-index: 0; filter: brightness(50%);"><img width="100%" height="610em"src="images\CacheValleyVB-results_91533_49800.jpg"></div> <!--Photo from: https://fhwaapps.fhwa.dot.gov/bywaysp/photos/72598-->
+            <div class="bannerimg" style=" top:6rem;"><img width="20%" height="20%" src="images\VISTA_Logo_Final_Vertical_Extended-PNG_Mono_White.png"></div>
         </div>
         <div class="indexcontent">
-            <h1 style="text-align: center; color: whitesmoke; font-size: 1.6rem;">The Center for Information Technology Research in the Interest of Society (CITRIS) is a fully-functioning research unit with the University of California, Merced.</h1>
+          <p style="text-align: center; color: whitesmoke; font-size: 1.4rem;">The Valley Institute for Sustainability, Technology & Agriculture, is a fully-functioning research unit within the University of California, Merced.</p>
         </div>
-
         <div style="margin-top: -3em;" id="initiatives"></div>
             <div style="margin-bottom: 35px;">
               <div class="container">
@@ -39,6 +37,7 @@
                   <div class="12u">
                     <div class="content">
                       <article class="box page-content">
+                        <section id="events"> <center><div style="margin-bottom: 2%; margin-top: 1%;"id="news"></div></center></section>
                         <section>
                           <iframe
                             src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1GT_5WL2hacmYNVb8XhGNFKsojRdYU8RB6ORoV0-ciE0&amp;font=Default&amp;lang=en&amp;initial_zoom=2&amp;height=650"
@@ -64,9 +63,6 @@
                             hands-on experience through programs like Tech for Social Good and Innovate to
                             Grow , where they apply team-based leadership skills to real-world projects.
                           </p>
-                          <span class="image featured">
-                            <img src="images/about_banner.jpg" alt="" />
-                          </span>
                         </section>
                       </article>
                     </div>
@@ -96,6 +92,38 @@
     $(function () {
       $("#nav").load("snippets/nav.html"); /*Navigation: Controlled by HTML snippet in snippets/nav.html*/
       $("#navPanel").load("snippets/nav.html"); /*Navigation: Controlled by HTML snippet in snippets/nav.html*/
+
+      //events populated by event-populator.js
+      populateEvents($("#events"), true);
+
+      $.get("/news.csv").then(function (text, status, xhr) {
+        var data = $.csv.toObjects(text);
+        // for (var i = 0; i < data.length; i++) {
+        for (var i = 0; i < 3; i++) {
+          if (data[i].ID.substring(0, 2) != "//")
+            switch (data[i].ID) {
+              default:
+                var url = new URL(data[i].LINK);
+                $("#news").append(
+                  $.parseHTML(
+                    '<figure class="news">' +
+                    '<div>' + (((data[i].ID).toString() === '') ? '<img src="images/favicon.png" alt="" class="news-card__image">' :
+                      '<img src="images/news/' + data[i].ID + '.jpg" alt="">') +
+                    '</div>' +
+                    '<figcaption>' +
+                    '<h3>' + data[i].TITLE + (url.hostname == "citris.ucmerced.edu"? "":" &#10697") + '</h3>' +
+                    '<p>' + data[i].DESCRIPTION + '</p>' +
+                    '</figcaption>' +
+                    '<footer>' +
+                    '<div><i</i>' + data[i].DATE + '</div>' +
+                    '</footer><a href="' + data[i].LINK + ' " target="_blank"></a>' +
+                    '</figure>'
+                  )
+                );
+                break;
+            }
+        }
+      });
     });
   </script>
     </body>

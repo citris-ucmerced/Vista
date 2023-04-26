@@ -821,21 +821,27 @@ figure.news {
 	display: inline-block;
 }
 .news {
-	min-height: 500px;
-    max-height: 500px;
+  transition: box-shadow .5s;
+  transition: transform .5s;
+  min-height: 28rem;
+  max-height: 28rem;
   font-family: 'Raleway', Arial, sans-serif;
   color: #fff;
   position: relative;
   overflow: hidden;
   margin: 20px;
-  min-width: 250px;
-  max-width: 310px;
+  min-width: 13rem;
+  max-width: 17rem;
   width: 100%;
-  background-color: #ffffff;
+  background-color: white;
   color: #000000;
+  box-shadow: 5px 5px 2px rgb(14, 45, 82, 50%);
   text-align: left;
   font-size: 16px;
-  box-shadow: 0 0 20px rgb(0, 0, 0, 51%);
+  -webkit-transition: transform .5s;
+  -moz-transition: transform .5s;
+  -ms-transition: transform .5s;
+  -o-transition: transform .5s;
 }
 .news * {
   -webkit-box-sizing: border-box;
@@ -858,12 +864,12 @@ figure.news {
 .news figcaption {
 	display: block;
     width: 90%;
-    height: 320px;
+    height: 12rem;
     overflow: hidden;
-    margin: -40px 15px 0;
-    padding: 15px;
+    margin: 0px 15px 0;
+    padding: 5px;
     position: absolute;
-    background-color: #ffffffed;
+    background-color: transparent;
 }
 .news .date {
   background-color: #2980b9;
@@ -905,7 +911,7 @@ figure.news {
 }
 .news footer {
   padding: 0 25px;
-  background-color: #4D82B7;
+  background-color: #6aa542;
   color: #e6e6e6;
   font-size: 0.8em;
   line-height: 30px;
@@ -930,15 +936,22 @@ figure.news {
   position: absolute;
   z-index: 1;
 }
-.news:hover img,
-.news.hover img {
-  -webkit-transform: scale(1.15);
-  transform: scale(1.15);
+
+.news:hover{
+  transform: scale(1.01);
+  -webkit-transform: scale(1.01);
+  -moz-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  -o-transform: scale(1.01);
+  box-shadow: 7px 7px 3px rgb(14, 45, 82, 50%);
 }
-.news:hover figcaption,
-.news.hover figcaption {
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
+
+.news:active{
+	transform:scale(0.97);
+	-webkit-transform:scale(0.97);
+	-moz-transform:scale(0.97);
+	-ms-transform:scale(0.97);
+	-o-transform:scale(0.97);
 }
 
 /* Events */
