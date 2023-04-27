@@ -821,8 +821,7 @@ figure.news {
 	display: inline-block;
 }
 .news {
-  transition: box-shadow .5s;
-  transition: transform .5s;
+  transition:  box-shadow 200ms ease-out, transform 100ms ease-in;
   min-height: 28rem;
   max-height: 28rem;
   font-family: 'Raleway', Arial, sans-serif;
@@ -838,10 +837,10 @@ figure.news {
   box-shadow: 5px 5px 2px rgb(14, 45, 82, 50%);
   text-align: left;
   font-size: 16px;
-  -webkit-transition: transform .5s;
-  -moz-transition: transform .5s;
-  -ms-transition: transform .5s;
-  -o-transition: transform .5s;
+  -webkit-transition:  box-shadow 200ms ease-out, transform 100ms ease-in;
+  -moz-transition:  box-shadow 200ms ease-out, transform 100ms ease-in;
+  -ms-transition:  box-shadow 200ms ease-out, transform 100ms ease-in;
+  -o-transition:  box-shadow 200ms ease-out, transform 100ms ease-in;
 }
 .news * {
   -webkit-box-sizing: border-box;
@@ -943,7 +942,7 @@ figure.news {
   -moz-transform: scale(1.01);
   -ms-transform: scale(1.01);
   -o-transform: scale(1.01);
-  box-shadow: 7px 7px 3px rgb(14, 45, 82, 50%);
+  box-shadow: 7px 7px 4px rgb(14, 45, 82, 50%);
 }
 
 .news:active{
@@ -2229,11 +2228,12 @@ div#FAQ ol ol li{
 
 	h2.major {
 		position: relative;
-		border-top: solid 5px #e7eae8;
+		border-top: solid 5px #daa900;
+		margin: 1rem;
 	}
 
 		h2.major span {
-			background: #fff;
+			color: #fff;
 			position: relative;
 			display: inline-block;
 		}
@@ -3994,3 +3994,20 @@ div#FAQ ol ol li{
 .annual_reports img:hover{
 	transform: scale(1.05);
 }
+
+/* animation css*/
+
+.reveal{
+	position: relative;
+	transform: translateY(150px);
+	opacity: 0;
+	transition: 1.5s all ease;
+	-webkit-transition: 1.5s all ease;
+	-moz-transition: 1.5s all ease;
+	-ms-transition: 1.5s all ease;
+	-o-transition: 1.5s all ease;
+}
+  .reveal.active{
+	transform: translateY(0);
+	opacity: 1;
+  }

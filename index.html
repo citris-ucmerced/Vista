@@ -37,32 +37,15 @@
                   <div class="12u">
                     <div class="content">
                       <article class="box page-content">
-                        <section id="events"> <center><div style="margin-bottom: 2%; margin-top: 1%;"id="news"></div></center></section>
-                        <section>
+                        <section id="events" class="reveal"> <center><div style="margin-bottom: 2%; margin-top: 1%;"id="news"></div></center></section>
+                        <h2 class="major">
+                          <span>Our History</span>
+                        </h2>
+                        <section class="reveal">
                           <iframe
                             src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1GT_5WL2hacmYNVb8XhGNFKsojRdYU8RB6ORoV0-ciE0&amp;font=Default&amp;lang=en&amp;initial_zoom=2&amp;height=650"
                             width="100%" height="640" frameborder="0"></iframe>
                         </section>
-                        <section>
-                          <h3>Our Campus</h3>
-                          <p>
-                            Established in 2005, University of California’s newest campus is also the first
-                            American research university of the 21st Century. UC Merced has exceeded all
-                            expectations: reaching R2 status faster than any other campus, achieving carbon
-                            neutrality through investment in sustainability in every facet of life, and
-                            rapidly growing to educate 9,000 undergraduate and graduate students.
-                          </p>
-                          <p>
-                            By being a member of the San Joaquin Valley community and serving as a
-                            representation of innovation, technology, and entrepreneurship in the heart of
-                            the state of California, UC Merced strives to deliver solutions to local and
-                            global problems.
-                          </p>
-                          <p>
-                            At UC Merced, learning goes beyond textbooks and classrooms. Students gain
-                            hands-on experience through programs like Tech for Social Good and Innovate to
-                            Grow , where they apply team-based leadership skills to real-world projects.
-                          </p>
                         </section>
                       </article>
                     </div>
@@ -125,6 +108,26 @@
         }
       });
     });
+  </script>
+  <!--Script for animation of scroll-->
+  <script>
+    function reveal() {
+      var reveals = document.querySelectorAll(".reveal");
+      for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 150;
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        } else {
+            reveals[i].classList.remove("active");
+        }
+      }
+    }
+    window.addEventListener("scroll", reveal);
+
+    // To check the scroll position on page load
+    reveal();
   </script>
     </body>
 </html>

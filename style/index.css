@@ -3,6 +3,7 @@
 html, body {
     margin: 0;
     padding: 0;
+    background-color: #1a6983a5;
 }
 
 #image-vista-logo {
@@ -35,6 +36,12 @@ h1 {
     background-image: linear-gradient(transparent 50%, #0e2c53), url("../images/CacheValleyVB-results_91533_49800.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+@media screen and (max-width: 800px) {
+    .indexbanner{
+        height: 50vh;
+    }
 }
 
 .bannerimg{
