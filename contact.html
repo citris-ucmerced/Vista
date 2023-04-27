@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+    <body class="homepage">
+        <div id="page-wrapper">
+    
+            <!-- NAVIGATION: Controlled by HTML snippet in snippets/nav.html -->
+            <nav id="nav"></nav>
+    
+        </div>
+        <!-- Main -->
+        <div id="main-wrapper">
+            <div id="main" class="container">
+                <div class="row">
+                    <div class="12u">
+                        <div class="content">
+                            <article class="box page-content">
+                                <header>
+                                    <h2 style="color: whitesmoke;">Contact Us</h2>
+                                </header>
+                                <p style="color: whitesmoke;">If you have any questions or concerns, please send us an email!</p>
+                                <header>
+                                </header>
+                                <section style="width: 50%;">
+                                    <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+                                        <label for="Name" class="fcf-label" style="color: whitesmoke;">Your name</label>
+                                        <div class="fcf-input-group">
+                                            <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+                                        </div>
+                                    <div class="fcf-form-group">
+                                        <label for="Email" class="fcf-label" style="color: whitesmoke;">Your email address</label>
+                                        <div class="fcf-input-group">
+                                            <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+                                        </div>
+                                    <div class="fcf-form-group">
+                                        <label for="Message" class="fcf-label" style="color: whitesmoke;">Your message</label>
+                                        <div class="fcf-input-group">
+                                            <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="fcf-form-group">
+                                        <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block" style="color: whitesmoke;" >Send</button>
+                                    </div>
+                                </section>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.dropotron.min.js"></script>
+        <script src="assets/js/skel.min.js"></script>
+        <script src="assets/js/skel-viewport.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+        <script src="assets/js/main.js"></script>
+        <script>
+            $(function () {
+                $("#nav").load("snippets/nav.html"); /*Navigation: Controlled by HTML snippet in snippets/nav.html*/
+                $("#navPanel").load("snippets/nav.html"); /*Navigation: Controlled by HTML snippet in snippets/nav.html*/
+                $("#footer").load("snippets/footer.html"); /*FOOTER: Controlled by HTML snippet in snippets/footer.html*/
+            });
+        </script>
+</body>
+</html>

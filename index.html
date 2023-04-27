@@ -23,6 +23,7 @@
         <h1>This site is currently under construction. Please check back later</h1>
 
         <img id="image-vista-logo" src="images/Vista-x-UCM.svg" />-->
+      <div id="page-wrapper">
         <nav id="nav"></nav>
         <div class="indexbanner">
             <div class="bannerimg" style=" top:6rem;"><img width="20%" height="20%" src="images\VISTA_Logo_Final_Vertical_Extended-PNG_Mono_White.png"></div>
@@ -53,7 +54,8 @@
                 </div>
               </div>
             </div>
-
+        <div id="footer"></div>
+      </div>
         <script src="" async defer></script>
 
   <!-- Scripts -->
@@ -71,6 +73,13 @@
       ]><script src="assets/js/ie/respond.min.js"></script
     ><![endif]-->
   <script src="assets/js/main.js"></script>
+  <script>
+    $(function () {
+        $("#nav").load("snippets/nav.html"); /*Navigation: Controlled by HTML snippet in snippets/nav.html*/
+        $("#navPanel").load("snippets/nav.html"); /*Navigation: Controlled by HTML snippet in snippets/nav.html*/
+        $("#footer").load("snippets/footer.html"); /*FOOTER: Controlled by HTML snippet in snippets/footer.html*/
+    });
+  </script>
   <script>
     $(function () {
       $("#nav").load("snippets/nav.html"); /*Navigation: Controlled by HTML snippet in snippets/nav.html*/

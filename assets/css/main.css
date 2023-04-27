@@ -20,7 +20,7 @@
 	}
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-		display: block;	
+		display: block;
 	}
 
 	body {
@@ -2432,7 +2432,7 @@ div#FAQ ol ol li{
 		font-weight: 700;
 		text-transform: uppercase;
 		text-decoration: none;
-		background: #4D82B7;
+		background: #daa900;
 		color: #fff;
 		border: 0;
 		line-height: 1em;
@@ -2892,9 +2892,9 @@ div#FAQ ol ol li{
 	}
 
 	#main-wrapper {
-		background: #fff;
-		border-top: solid 5px #4D82B7;
-		border-bottom: solid 5px #c1cac5;
+		background: #1a6983a5;
+		border-top: solid 5px #0e2c53;
+		border-bottom: solid 5px #6ba442;
 	}
 
 /* Banner */
@@ -2951,8 +2951,13 @@ div#FAQ ol ol li{
 	}
 
 	#footer h2.major span {
-		background: #f2f5f3;
-	}
+		background: #daa900;
+		border-radius: 1rem;
+		-webkit-border-radius: 1rem;
+		-moz-border-radius: 1rem;
+		-ms-border-radius: 1rem;
+		-o-border-radius: 1rem;
+}
 
 /* Copyright */
 
@@ -3995,7 +4000,7 @@ div#FAQ ol ol li{
 	transform: scale(1.05);
 }
 
-/* animation css*/
+/* reveal animation css*/
 
 .reveal{
 	position: relative;
