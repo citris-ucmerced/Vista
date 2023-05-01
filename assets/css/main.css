@@ -802,7 +802,7 @@
 
 
 /* News Page */
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700);
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
 @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 
 .news-cards-container {
@@ -824,7 +824,7 @@ figure.news {
   transition:  box-shadow 200ms ease-out, transform 100ms ease-in;
   min-height: 28rem;
   max-height: 28rem;
-  font-family: 'Raleway', Arial, sans-serif;
+  font-family: 'PT Sans', sans-serif;
   color: #fff;
   position: relative;
   overflow: hidden;
@@ -869,6 +869,7 @@ figure.news {
     padding: 5px;
     position: absolute;
     background-color: transparent;
+	color: black;
 }
 .news .date {
   background-color: #2980b9;
@@ -902,6 +903,7 @@ figure.news {
   display: inline-block;
   font-weight: 600;
   text-transform: uppercase;
+  color: #0e2c53;
 }
 .news p {
   font-size: 0.8em;
@@ -3195,7 +3197,7 @@ div#FAQ ol ol li{
 				height: 3.25em;
 				line-height: 3.25em;
 				text-align: center;
-				font-family: 'Open Sans Condensed', sans-serif;
+				font-family: 'PT Sans', sans-serif;
 				font-weight: 700;
 				text-transform: uppercase;
 				cursor: default;
@@ -3263,7 +3265,7 @@ div#FAQ ol ol li{
 				border-radius: 6px;
 				line-height: 2.75em;
 				text-align: center;
-				font-family: 'Open Sans Condensed', sans-serif;
+				font-family: 'PT Sans', sans-serif;
 				font-weight: 700;
 				text-transform: uppercase;
 				padding: 1em 0;
@@ -3272,7 +3274,6 @@ div#FAQ ol ol li{
 				margin-top: -1em;
 				box-shadow: 0 1em 2em 0 rgba(0, 0, 0, 0.1);
 			}
-
 				.dropotron li > a, .dropotron li > span {
 					display: block;
 					color: #fff;
