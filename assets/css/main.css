@@ -3244,6 +3244,16 @@ div#FAQ ol ol li{
 						top: 3px;
 					}
 
+					#nav li:hover .fa-caret-down{
+    					transition: 0.9s;
+    					transform: rotateY(180deg);
+    					-webkit-transform: rotateY(180deg);
+    					-moz-transform: rotateY(180deg);
+    					-ms-transform: rotateY(180deg);
+    					-o-transform: rotateY(180deg);
+}
+
+
 					#nav li:hover a, #nav li:hover span {
 						background: #daa900;
 						color: #fff;
