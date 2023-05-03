@@ -67,3 +67,13 @@ h1 {
     flex-direction: column;
     font-family: 'PT Sans', sans-serif;
 }
+
+a, a:link{
+	color:#b2e192;
+	background-color: transparent;
+}
+
+a:hover{
+    color: #e7f2df;
+    text-decoration: underline;
+}
