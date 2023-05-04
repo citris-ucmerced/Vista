@@ -54,6 +54,25 @@ h1 {
     z-index: 1;
 }
 
+@keyframes fadeInUp {
+    0% {
+      transform: translateY(30%);
+      opacity: 0;
+      -webkit-transform: translateY(30%);
+      -moz-transform: translateY(30%);
+      -ms-transform: translateY(30%);
+      -o-transform: translateY(30%);
+}
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+
+  .fadeInUp-animation {
+    animation: 2.5s fadeInUp;
+    -webkit-animation: 2.5s fadeInUp;
+}
 .indexcontent{
     margin: 0px;
     background-color: #0e2c53;
