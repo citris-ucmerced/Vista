@@ -61,7 +61,7 @@
 				$(
 					'<div id="titleBar">' +
 						'<a href="#navPanel" class="toggle"></a>' +
-						(((typeof($('#logo').html())) == 'undefined') ? '<span class="title">Citris</span>' :  '<span class="title">' + $('#logo').html() + '</span>') + 
+						(((typeof($('#logo').html())) == 'undefined') ? '<span class="title">Vista</span>' :  '<span class="title">' + $('#logo').html() + '</span>') + 
 						// '<span class="title">' + $('#logo').html() + '</span>' +
 						// '<span class="title">Citris</span>' +
 					'</div>'
