@@ -44,8 +44,8 @@ const ContactUs = () => {
         <Navbar />
         <Container>
           <Box my={4}>
-            <Typography variant="h4" component="h1" align="center" className="page-title" gutterBottom>
-              Contact Us
+            <Typography variant="h3" component="h1" align="center" className="page-title" gutterBottom>
+              CONTACT US
             </Typography>
 
             <Grid container spacing={4} sx={{ marginTop: "2rem" }}>
@@ -54,7 +54,6 @@ const ContactUs = () => {
                   <Card
                     sx={{
                       height: "100%",
-                      backgroundColor: "rgba(255, 255, 255, 0.7)",
                     }}
                   >
                     <CardContent>

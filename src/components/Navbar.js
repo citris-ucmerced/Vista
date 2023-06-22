@@ -11,6 +11,7 @@ import {
   SwipeableDrawer,
 } from "@mui/material";
 import { useState } from "react";
+import { FaHome, FaUsers, FaCaretDown, FaAddressBook } from "react-icons/fa";
 
 import MenuIcon from "@mui/icons-material/Menu";
 import logo from "../assets/images/logo.png";
@@ -20,10 +21,27 @@ const Navbar = () => {
     {
       name: "Home",
       route: "/",
+      icon: FaHome,
+    },
+    {
+      name: "About",
+      route: "",
+      icon: FaUsers,
+      sublinks: [
+        {
+          name: "People",
+          route: "/People",
+        },
+        {
+          name: "Location",
+          route: "/Location",
+        }
+      ]
     },
     {
       name: "Contact Us",
       route: "/ContactUs",
+      icon: FaAddressBook,
     },
   ];
 
@@ -38,7 +56,7 @@ const Navbar = () => {
         {routes.map((route) => (
           <ListItem key={route.name} disablePadding>
             <ListItemButton component={Link} to={route.route}>
-              <ListItemText primary={route.name} />
+              <ListItemText primary={route.name.toUpperCase()} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -61,12 +79,15 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar className="main-navbar">
+    <AppBar className="navbar">
       <Toolbar>
         <Box component="image">
-          <a href="/">
-            <img className="logo" src={logo} alt="VISTA logo" />
-          </a>
+          <img
+            className="logo"
+            src={logo}
+            alt="VISTA logo"
+            style={{ maxHeight: "40px", minWidth: "160px" }}
+          />
         </Box>
 
         <Button onClick={toggleDrawer(true)} id="hamburger-menu">
@@ -82,11 +103,43 @@ const Navbar = () => {
           <SideBar />
         </SwipeableDrawer>
 
-        {routes.map((route) => (
-          <Link to={route.route} className="nav-link" key={route.name}>
-            {route.name}
-          </Link>
-        ))}
+        <div className="nav">
+          {routes.map((route) => {
+            if (route.sublinks == undefined) {
+              return (
+                <Link to={route.route} className="nav-link" key={route.name}>
+                  <route.icon />
+                  <Box sx={{ marginInline: "10px" }}>
+                    {route.name.toUpperCase()}
+                  </Box>
+                </Link>
+              );
+            } else {
+              return (
+                <div>
+                  <Link to={route.route} className="nav-link" key={route.name}>
+                    <route.icon />
+                    <Box sx={{ marginInline: "10px" }}>
+                      {route.name.toUpperCase()}
+                    </Box>
+                    <FaCaretDown />
+                    {/* 
+                      TODO: Add dropdown menu with css rules
+                    <div className="dropdown-content">
+                      {
+                        route.sublinks.map((sublink) => (
+                          <a href="#" className="dropdown">
+                            {sublink.name}
+                          </a>
+                        ))
+                      }
+                    </div> */}
+                  </Link>
+                </div>
+              );
+            }
+          })}
+        </div>
       </Toolbar>
     </AppBar>
   );
