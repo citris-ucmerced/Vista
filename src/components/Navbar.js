@@ -11,8 +11,9 @@ import {
   SwipeableDrawer,
 } from "@mui/material";
 import { useState } from "react";
-import { FaHome, FaUsers, FaCaretDown, FaAddressBook } from "react-icons/fa";
+import SideBar from "./Sidebar";
 
+import { FaHome, FaUsers, FaCaretDown, FaAddressBook } from "react-icons/fa";
 import MenuIcon from "@mui/icons-material/Menu";
 import logo from "../assets/images/logo.png";
 
@@ -35,8 +36,8 @@ const Navbar = () => {
         {
           name: "Location",
           route: "/Location",
-        }
-      ]
+        },
+      ],
     },
     {
       name: "Contact Us",
@@ -44,25 +45,6 @@ const Navbar = () => {
       icon: FaAddressBook,
     },
   ];
-
-  const SideBar = () => (
-    <Box
-      sx={{ width: 250 }}
-      role="presentation"
-      onClick={toggleDrawer(false)}
-      onKeyDown={toggleDrawer(false)}
-    >
-      <List>
-        {routes.map((route) => (
-          <ListItem key={route.name} disablePadding>
-            <ListItemButton component={Link} to={route.route}>
-              <ListItemText primary={route.name.toUpperCase()} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </Box>
-  );
 
   const [open, setOpen] = useState(false);
 
@@ -74,7 +56,6 @@ const Navbar = () => {
     ) {
       return;
     }
-
     setOpen(open);
   };
 
@@ -100,12 +81,12 @@ const Navbar = () => {
           onClose={toggleDrawer(false)}
           onOpen={toggleDrawer(true)}
         >
-          <SideBar />
+          <SideBar routes={routes} open={open} setOpen={setOpen} />
         </SwipeableDrawer>
 
         <div className="nav">
           {routes.map((route) => {
-            if (route.sublinks == undefined) {
+            if (route.sublinks === undefined) {
               return (
                 <Link to={route.route} className="nav-link" key={route.name}>
                   <route.icon />
@@ -116,24 +97,21 @@ const Navbar = () => {
               );
             } else {
               return (
-                <div>
+                <div className="dropdown">
                   <Link to={route.route} className="nav-link" key={route.name}>
                     <route.icon />
                     <Box sx={{ marginInline: "10px" }}>
                       {route.name.toUpperCase()}
                     </Box>
                     <FaCaretDown />
-                    {/* 
-                      TODO: Add dropdown menu with css rules
+
                     <div className="dropdown-content">
-                      {
-                        route.sublinks.map((sublink) => (
-                          <a href="#" className="dropdown">
-                            {sublink.name}
-                          </a>
-                        ))
-                      }
-                    </div> */}
+                      {route.sublinks.map((sublink) => (
+                        <Link to={sublink.route} key={sublink.name}>
+                          {sublink.name}
+                        </Link>
+                      ))}
+                    </div>
                   </Link>
                 </div>
               );
