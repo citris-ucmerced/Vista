@@ -3,17 +3,7 @@ import { Box, List, ListItem, ListItemButton, ListItemText } from "@mui/material
 import { FaCaretDown } from "react-icons/fa";
 
 
-const SideBar = ({ routes, open, setOpen }) => {
-  const toggleDrawer = (open) => (event) => {
-    if (
-      event &&
-      event.type === "keydown" &&
-      (event.key === "Tab" || event.key === "Shift")
-    ) {
-      return;
-    }
-    setOpen(open);
-  };
+const SideBar = ({ routes, toggleDrawer }) => {
 
   return (
     <Box

@@ -2,12 +2,7 @@ import { Link } from "react-router-dom";
 import {
   AppBar,
   Toolbar,
-  Box,
-  Button,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemText,
+  Box,  Button,
   SwipeableDrawer,
 } from "@mui/material";
 import { useState } from "react";
@@ -81,7 +76,7 @@ const Navbar = () => {
           onClose={toggleDrawer(false)}
           onOpen={toggleDrawer(true)}
         >
-          <SideBar routes={routes} open={open} setOpen={setOpen} />
+          <SideBar routes={routes} toggleDrawer={toggleDrawer} />
         </SwipeableDrawer>
 
         <div className="nav">

@@ -20,6 +20,10 @@ html, body {
   font-weight: bold;
 }
 
+.link {
+  color: #BCE09A;
+}
+
 /* Home.js */
 
 .home-banner {
