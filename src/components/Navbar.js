@@ -92,8 +92,8 @@ const Navbar = () => {
               );
             } else {
               return (
-                <div className="dropdown">
-                  <Link to={route.route} className="nav-link" key={route.name}>
+                <div className="dropdown" key={route.name}>
+                  <div className="nav-link" key={route.name}>
                     <route.icon />
                     <Box sx={{ marginInline: "10px" }}>
                       {route.name.toUpperCase()}
@@ -107,7 +107,7 @@ const Navbar = () => {
                         </Link>
                       ))}
                     </div>
-                  </Link>
+                  </div>
                 </div>
               );
             }

@@ -202,6 +202,12 @@ iframe {
 
 /* Mobile View */
 @media screen and (max-width: 789px) {
+
+  .center *{
+    display: flex;
+    justify-content: center;
+  }
+
   /* Home.js */
 
   .home-logo {
@@ -235,5 +241,10 @@ iframe {
   .contact-info {
     max-width: 27rem;
     margin-bottom: 3rem;
+  }
+
+  /* People */
+  .description {
+    padding: 1rem;
   }
 }

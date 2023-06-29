@@ -48,12 +48,12 @@ const ContactUs = () => {
               CONTACT US
             </Typography>
 
-            <Grid container spacing={4} sx={{ marginTop: "2rem" }}>
+            <Grid container spacing={4} sx={{ marginTop: "2rem"}}>
               {contactDetails.map((contact, index) => (
                 <Grid item xs={12} sm={6} md={3} key={index}>
                   <Card
                     sx={{
-                      height: "100%",
+                      height: "100%"
                     }}
                   >
                     <CardContent>
