@@ -1,32 +1,59 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import { Container, Box, Typography } from "@mui/material";
+import { Container, Box, Typography, Grid } from "@mui/material";
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 import { readCSV } from "../utils/CSVReader";
 import staffCSV from "../assets/sheets/staff.csv";
+import studentCSV from "../assets/sheets/students.csv";
 
 import StaffSection from "../components/StaffSection";
+import StudentSection from "../components/StudentSection";
 
 const People = () => {
-  const [data, setData] = useState([]);
+  const [staffData, setStaffData] = useState([]);
   const [staff, setStaff] = useState([]);
 
+  // Read staff csv file
   useEffect(() => {
-    readCSV(staffCSV, setData);
+    readCSV(staffCSV, setStaffData);
   }, []);
 
+  // Set staff data into staff array
   useEffect(() => {
-    const staffData = data.map((person) => ({
-      name: person.name,
-      title: person.title,
-      description: person.description,
-      imageFile: person.imageFile,
-    }));
-    setStaff(staffData);
-  }, [data]);
+    if (staffData.length > 0) {
+      const data = staffData.map((person) => ({
+        name: person.name,
+        title: person.title,
+        description: person.description,
+        imageFile: person.imageFile,
+      }));
+      setStaff(data);
+    }
+  }, [staffData]);
+
+  const [studentData, setStudentData] = useState([]);
+  const [students, setStudents] = useState([]);
+
+  // Read student csv file
+  useEffect(() => {
+    readCSV(studentCSV, setStudentData);
+  }, []);
+
+  // Set student data into student array
+  useEffect(() => {
+    if (studentData.length > 0) {
+      const data = studentData.map((person) => ({
+        name: person.name,
+        title: person.title,
+        description: person.description,
+        imageFile: person.imageFile,
+      }));
+      setStudents(data);
+    }
+  }, [studentData]);
 
   return (
     <>
@@ -61,7 +88,7 @@ const People = () => {
           </Box>
 
           <Box>
-            {staff.map((person, idx) => (
+            {staff?.map((person, idx) => (
               <StaffSection
                 key={idx}
                 name={person.name}
@@ -70,6 +97,30 @@ const People = () => {
                 imageFile={person.imageFile}
               />
             ))}
+          </Box>
+
+          <Box>
+            <Typography
+              variant="h4"
+              component="h1"
+              align="center"
+              className="page-title"
+              gutterBottom
+              mb={8}
+            >
+              STUDENT TEAM
+            </Typography>
+            <Grid container spacing={0} direction="row" justifyContent="center">
+              {students?.map((person, idx) => (
+                <StudentSection
+                  key={idx}
+                  name={person.name}
+                  title={person.title}
+                  description={person.description}
+                  imageFile={person.imageFile}
+                />
+              ))}
+            </Grid>
           </Box>
         </Container>
         <Footer />

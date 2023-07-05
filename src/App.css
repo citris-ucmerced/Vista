@@ -164,6 +164,7 @@ iframe {
 
 /*  Desktop View */
 @media screen and (min-width: 790px) {
+  
   /* Home.js */
 
   .home-logo {

@@ -13,21 +13,23 @@ const StaffSection = ({ name, title, description, imageFile }) => {
       <Grid item xs={12}>
         <Typography>{title}</Typography>
       </Grid>
-      <Grid item container xs={12}>
-        <Grid item sm={12} md={2}>
+      <Grid item container xs={12} lg="column" md="row">
+        <Grid item sm={4} lg={2} sx={{width: "100%"}}>
           <Box
             component="img"
             sx={{
-              maxHeight: "10rem",
-              maxWidth: "10rem",
+              maxHeight: "12rem",
+              maxWidth: "12rem",
               borderRadius: "1rem",
             }}
             alt={name}
             src={image}
           />
         </Grid>
-        <Grid item sm={12} md={10} mb={2}>
-          <Typography className="description">{description}</Typography>
+        <Grid item sm={8} lg={10} mb={2}>
+          <Box>
+            <Typography className="description" sx={{paddingX: "1rem"}}>{description}</Typography>
+          </Box>
         </Grid>
       </Grid>
       <span
