@@ -68,7 +68,9 @@ html, body {
   display: flex;
   align-items: center;
   padding: 0.75rem;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), margin-top 0.3s ease-in-out;
 }
+
 
 .nav-link:hover {
   color: #fff;
@@ -77,6 +79,9 @@ html, body {
   border-top-right-radius: 0;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  transform: translateY(10px);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  margin-top: -10px;
 } 
 
 .dropdown {
@@ -111,6 +116,15 @@ html, body {
 .dropdown-content a:hover {background-color: rgb(11, 92, 118);}
 
 .dropdown:hover .dropdown-content {display: block;}
+
+.flipped-icon {
+  transition: transform 0.5s ease-in-out;
+}
+
+.nav-link:hover .flipped-icon {
+  transform: scaleX(-1);
+  color: white;
+}
 
 /* Contact Us */
 .contact-us-container {

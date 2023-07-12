@@ -94,11 +94,11 @@ const Navbar = () => {
               return (
                 <div className="dropdown" key={route.name}>
                   <div className="nav-link" key={route.name}>
-                    <route.icon />
+                    <route.icon/>
                     <Box sx={{ marginInline: "10px" }}>
                       {route.name.toUpperCase()}
                     </Box>
-                    <FaCaretDown />
+                    <FaCaretDown className="flipped-icon"/>
 
                     <div className="dropdown-content">
                       {route.sublinks.map((sublink) => (
