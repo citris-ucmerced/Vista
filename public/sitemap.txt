@@ -1,2 +1,4 @@
 https://vista.ucmerced.edu/
+https://vista.ucmerced.edu/?/People
+https://vista.ucmerced.edu/?/Location
 https://vista.ucmerced.edu/?/ContactUs
