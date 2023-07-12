@@ -6,6 +6,18 @@ html, body {
   overflow-x: hidden;
 }
 
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-view {
+  height: 100vh;
+  width: 100vw;
+}
+
+
 ::-webkit-scrollbar {
   width: 5px;
   height: 20px;
@@ -174,6 +186,16 @@ iframe {
   border-style: none;
   aspect-ratio: 9/10;
   width: 100%;
+}
+
+/* Not Found */
+
+.go-home-link {
+  color: white;
+}
+
+.go-home-link:hover {
+  color: #daa900;
 }
 
 /*  Desktop View */
