@@ -28,7 +28,7 @@ const NotFound = () => {
           </Grid>
           <Grid item xs={12} className="centered">
             <Link to="/" className="go-home-link">
-              <Typography variant="h6">Go Home</Typography>
+              <Typography variant="h5">Go Home</Typography>
             </Link>
           </Grid>
         </Grid>
