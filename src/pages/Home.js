@@ -19,7 +19,7 @@ const Home = () => {
         <Navbar />
         <Box className="home-banner">
           <Box className="home-logo">
-            <img src={logoExtendedWhite} alt="Vista Logo White" />
+            {/*<img src={logoExtendedWhite} alt="Vista Logo White"/>*/}
           </Box>
           <Typography
             className="home-subtitle"

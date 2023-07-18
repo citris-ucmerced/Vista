@@ -54,6 +54,9 @@ html, body {
 .home-logo {
   display: flex;
   justify-content: center;
+  background-image: url("./assets/images/logo-extended-white.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 /* Navbar.js */
@@ -249,7 +252,7 @@ iframe {
 
   .home-logo {
     height: 40vh;
-    width: 100%;
+    width: 50%;
   }
 
   /* Navbar.js */
