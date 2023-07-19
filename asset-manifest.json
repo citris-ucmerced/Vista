@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.35d2663f.css",
-    "main.js": "/static/js/main.7eef9032.js",
+    "main.css": "/static/css/main.2d607dfe.css",
+    "main.js": "/static/js/main.a8ec7c0f.js",
     "static/js/787.2667ce32.chunk.js": "/static/js/787.2667ce32.chunk.js",
     "static/media/santa-margarita.jpg": "/static/media/santa-margarita.af88cea7b50708f2a29f.jpg",
     "static/media/acs.jpeg": "/static/media/acs.9fe81be4ad1d75875ca0.jpeg",
@@ -9,13 +9,13 @@
     "static/media/logo.png": "/static/media/logo.dc104983539196e01750.png",
     "static/media/staff.csv": "/static/media/staff.72ce5e2cbf5facde7177.csv",
     "index.html": "/index.html",
-    "static/media/students.csv": "/static/media/students.b61bc6a8c9b036d2e756.csv",
-    "main.35d2663f.css.map": "/static/css/main.35d2663f.css.map",
-    "main.7eef9032.js.map": "/static/js/main.7eef9032.js.map",
+    "static/media/students.csv": "/static/media/students.40aae96795081778ab3b.csv",
+    "main.2d607dfe.css.map": "/static/css/main.2d607dfe.css.map",
+    "main.a8ec7c0f.js.map": "/static/js/main.a8ec7c0f.js.map",
     "787.2667ce32.chunk.js.map": "/static/js/787.2667ce32.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.35d2663f.css",
-    "static/js/main.7eef9032.js"
+    "static/css/main.2d607dfe.css",
+    "static/js/main.a8ec7c0f.js"
   ]
 }
