@@ -59,6 +59,10 @@ html, body {
   background-repeat: no-repeat;
 }
 
+.home-subtitle{
+  max-height: 45vh;
+}
+
 /* Navbar.js */
 
 .nav {
@@ -204,7 +208,7 @@ iframe {
 }
 
 /*  Desktop View */
-@media screen and (min-width: 790px) {
+@media screen and (min-width: 790px){
   
   /* Home.js */
 
@@ -253,8 +257,13 @@ iframe {
   /* Home.js */
 
   .home-logo {
-    height: 40vh;
-    width: 50%;
+    height: 50vh;
+    width: 50vw;
+    background-image: url("./assets/images/logo-extended-white-no-desc.png");
+  }
+
+  .home-subtitle{
+    font-size: 1rem;
   }
 
   /* Navbar.js */
