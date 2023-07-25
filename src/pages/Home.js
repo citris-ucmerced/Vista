@@ -18,8 +18,8 @@ const Home = () => {
       <div>
         <Navbar />
         <Box className="home-banner">
-          <Box className="home-logo">
-            {/*<img src={logoExtendedWhite} alt="Vista Logo White"/>*/}
+          <Box className="home-logo" >
+            <img src={logoExtendedWhite} alt="Vista Logo White" />
           </Box>
           <Typography
             className="home-subtitle"
@@ -28,6 +28,8 @@ const Home = () => {
             sx={{ 
               fontSize: "1.4rem",
               marginInline: "3rem",
+              marginTop: "4rem",
+              maxHeight:"170px"
             }}
             gutterBottom
           >

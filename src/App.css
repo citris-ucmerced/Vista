@@ -54,9 +54,6 @@ html, body {
 .home-logo {
   display: flex;
   justify-content: center;
-  background-image: url("./assets/images/logo-extended-white.png");
-  background-size: 100%;
-  background-repeat: no-repeat;
 }
 
 .home-subtitle{
@@ -259,7 +256,6 @@ iframe {
   .home-logo {
     height: 50vh;
     width: 50vw;
-    background-image: url("./assets/images/logo-extended-white-no-desc.png");
   }
 
   .home-subtitle{
