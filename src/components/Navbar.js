@@ -6,11 +6,13 @@ import {
   SwipeableDrawer,
 } from "@mui/material";
 import { useState } from "react";
-import SideBar from "./Sidebar";
 
-import { FaHome, FaUsers, FaCaretDown, FaAddressBook } from "react-icons/fa";
+import { FaHome, FaUsers, FaAddressBook } from "react-icons/fa";
 import MenuIcon from "@mui/icons-material/Menu";
 import logo from "../assets/images/logo.png";
+
+import SideBar from "./Sidebar";
+import DropdownLink from "./DropdownLink";
 
 const Navbar = () => {
   const routes = [
@@ -92,23 +94,7 @@ const Navbar = () => {
               );
             } else {
               return (
-                <div className="dropdown" key={route.name}>
-                  <div className="nav-link" key={route.name}>
-                    <route.icon/>
-                    <Box sx={{ marginInline: "10px" }}>
-                      {route.name.toUpperCase()}
-                    </Box>
-                    <FaCaretDown className="flipped-icon"/>
-
-                    <div className="dropdown-content">
-                      {route.sublinks.map((sublink) => (
-                        <Link to={sublink.route} key={sublink.name}>
-                          {sublink.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                </div>
+                <DropdownLink route={route} key={route.name} />
               );
             }
           })}

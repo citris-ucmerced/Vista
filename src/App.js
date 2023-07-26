@@ -6,7 +6,7 @@ import People from "./pages/People.js";
 import ContactUs from "./pages/ContactUs.js"
 import Location from "./pages/Location.js"
 import NotFound from "./pages/NotFound.js";
-import "./App.css";
+import "./global.css";
 
 function App() {
   return (
