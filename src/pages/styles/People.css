@@ -1,0 +1,8 @@
+/* People.js */
+
+/* Mobile View */
+@media screen and (max-width: 789px) {
+  .description {
+    padding: 1rem;
+  }
+}

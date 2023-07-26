@@ -14,6 +14,8 @@ import logo from "../assets/images/logo.png";
 import SideBar from "./Sidebar";
 import DropdownLink from "./DropdownLink";
 
+import "./styles/Navbar.css";
+
 const Navbar = () => {
   const routes = [
     {

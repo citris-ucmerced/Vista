@@ -1,0 +1,24 @@
+/* Contact Us */
+
+/*  Desktop View */
+@media screen and (min-width: 790px) {
+  .contact-us-container {
+    flex-direction: row;
+  }
+
+  .contact-info {
+    margin-right: 3rem;
+  }
+}
+
+/* Mobile View */
+@media screen and (max-width: 789px) {
+  .contact-us-container {
+    flex-direction: column;
+  }
+
+  .contact-info {
+    max-width: 27rem;
+    margin-bottom: 3rem;
+  }
+}

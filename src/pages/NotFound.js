@@ -3,6 +3,8 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { BiSolidError } from "react-icons/bi";
 
+import "./styles/NotFound.css"
+
 const NotFound = () => {
   return (
     <>

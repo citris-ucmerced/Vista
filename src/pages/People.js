@@ -12,6 +12,8 @@ import studentCSV from "../assets/sheets/students.csv";
 import StaffSection from "../components/StaffSection";
 import StudentSection from "../components/StudentSection";
 
+import "./styles/People.css"
+
 const People = () => {
   const [staffData, setStaffData] = useState([]);
   const [staff, setStaff] = useState([]);

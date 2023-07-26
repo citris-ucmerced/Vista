@@ -1,0 +1,43 @@
+/* Home.js */
+
+.home-banner {
+  background-image: linear-gradient(to top, #0e2c53, transparent 60%),
+    url("../../assets/images/santa-margarita.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 0 3rem 0;
+}
+
+.home-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.home-subtitle {
+  max-height: 45vh;
+}
+
+/* Desktop View */
+@media screen and (min-width: 790px) {
+  .home-logo {
+    height: 60vh;
+    width: 320px;
+  }
+}
+
+/* Mobile View */
+@media screen and (max-width: 789px) {
+  .home-logo {
+    height: 50vh;
+    width: 50vw;
+  }
+
+  .home-subtitle {
+    font-size: 1rem;
+  }
+}

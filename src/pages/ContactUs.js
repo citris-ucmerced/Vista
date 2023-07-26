@@ -11,6 +11,8 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
+import "./styles/ContactUs.css";
+
 const ContactUs = () => {
   const contactDetails = [
     {

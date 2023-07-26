@@ -6,6 +6,8 @@ import Footer from "../components/Footer";
 
 import ACS from "../assets/images/acs.jpeg";
 
+import "./styles/Location.css"
+
 const Location = () => {
   return (
     <>

@@ -4,6 +4,8 @@ import { AiFillHome } from "react-icons/ai";
 import { FaInstagram } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 
+import "./styles/Footer.css";
+
 const Footer = () => {
   return (
     <Box

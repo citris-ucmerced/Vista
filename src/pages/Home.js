@@ -6,6 +6,8 @@ import Footer from "../components/Footer";
 
 import logoExtendedWhite from "../assets/images/logo-extended-white.png";
 
+import "./styles/Home.css"
+
 const Home = () => {
   return (
     <>
