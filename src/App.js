@@ -5,7 +5,9 @@ import Home from "./pages/Home.js";
 import People from "./pages/People.js";
 import ContactUs from "./pages/ContactUs.js"
 import Location from "./pages/Location.js"
+import Events from "./pages/Events.js";
 import NotFound from "./pages/NotFound.js";
+
 import "./global.css";
 
 function App() {
@@ -17,6 +19,7 @@ function App() {
             <Route path="ContactUs" element={<ContactUs />} />
             <Route path="/People" element={<People />} />
             <Route path="/Location" element={<Location />} />
+            <Route path="/Events" element={<Events />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

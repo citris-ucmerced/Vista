@@ -36,6 +36,10 @@ const Navbar = () => {
           name: "Location",
           route: "/Location",
         },
+        {
+          name: "Events",
+          route: "/Events",
+        }
       ],
     },
     {
