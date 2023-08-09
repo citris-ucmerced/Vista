@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.0edd59f5.css",
-    "main.js": "/static/js/main.7b233245.js",
+    "main.css": "/static/css/main.b6fde6c8.css",
+    "main.js": "/static/js/main.084e6ce7.js",
     "static/js/787.2667ce32.chunk.js": "/static/js/787.2667ce32.chunk.js",
     "static/media/santa-margarita.jpg": "/static/media/santa-margarita.af88cea7b50708f2a29f.jpg",
     "static/media/acs.jpeg": "/static/media/acs.9fe81be4ad1d75875ca0.jpeg",
-    "static/media/logo-extended-white.png": "/static/media/logo-extended-white.b314d7bf9a42d4fea09a.png",
     "static/media/logo.png": "/static/media/logo.dc104983539196e01750.png",
+    "static/media/logo-extended-white-no-desc.png": "/static/media/logo-extended-white-no-desc.3d206047deda878418f2.png",
     "static/media/staff.csv": "/static/media/staff.72ce5e2cbf5facde7177.csv",
     "index.html": "/index.html",
-    "static/media/students.csv": "/static/media/students.b61bc6a8c9b036d2e756.csv",
-    "main.0edd59f5.css.map": "/static/css/main.0edd59f5.css.map",
-    "main.7b233245.js.map": "/static/js/main.7b233245.js.map",
+    "static/media/students.csv": "/static/media/students.40aae96795081778ab3b.csv",
+    "main.b6fde6c8.css.map": "/static/css/main.b6fde6c8.css.map",
+    "main.084e6ce7.js.map": "/static/js/main.084e6ce7.js.map",
     "787.2667ce32.chunk.js.map": "/static/js/787.2667ce32.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0edd59f5.css",
-    "static/js/main.7b233245.js"
+    "static/css/main.b6fde6c8.css",
+    "static/js/main.084e6ce7.js"
   ]
 }
