@@ -16,8 +16,8 @@ const DropdownLink = ({ route }) => {
     setAnchorEl(null);
   };
 
-  return (    
-    
+  return (
+
     <div>
       <Box onClick={handleClick} className="nav-link">
         <route.icon />

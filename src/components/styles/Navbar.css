@@ -41,6 +41,7 @@
 .dropdown-content .MuiPaper-root {
   background-color: #daa900;
   color: white;
+  position: absolute;
 }
 
 .flipped-icon {
