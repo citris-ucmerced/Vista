@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, {useState, useEffect} from 'react';
 import { Menu, MenuItem, Box } from "@mui/material";
 import { Link } from "react-router-dom";
 
@@ -15,6 +15,18 @@ const DropdownLink = ({ route }) => {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  useEffect(() => {
+    document.addEventListener("scroll", handleClose, true);
+  }, []);
+
+  // on unmount, remove the scroll event listener
+  useEffect(
+    () => () => {
+      document.removeEventListener("scroll", handleClose, true);
+    },
+    []
+  );
 
   return (
 
