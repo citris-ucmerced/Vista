@@ -6,6 +6,7 @@ import People from "./pages/People.js";
 import ContactUs from "./pages/ContactUs.js"
 import Location from "./pages/Location.js"
 import Events from "./pages/Events.js";
+import EventDetails from "./pages/EventDetails.js";
 import NotFound from "./pages/NotFound.js";
 
 import "./global.css";
@@ -16,10 +17,11 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="ContactUs" element={<ContactUs />} />
-            <Route path="/People" element={<People />} />
-            <Route path="/Location" element={<Location />} />
-            <Route path="/Events" element={<Events />} />
+            <Route path="contactus" element={<ContactUs />} />
+            <Route path="/people" element={<People />} />
+            <Route path="/location" element={<Location />} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/events/:id" element={<EventDetails />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

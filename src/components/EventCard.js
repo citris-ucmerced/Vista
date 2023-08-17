@@ -2,6 +2,7 @@ import { useState } from "react";
 import {
   Grid,
   Box,
+  Chip,
   Typography,
   Button,
   Popover,
@@ -10,7 +11,10 @@ import {
   Paper,
   ClickAwayListener,
 } from "@mui/material";
+
 import { FaCaretDown } from "react-icons/fa";
+
+import "./styles/Event.css";
 
 const DateSquare = ({ date }) => {
   const day = date.toLocaleString("default", { day: "numeric" });
@@ -41,7 +45,7 @@ const DateSquare = ({ date }) => {
 };
 
 const AddToCalendar = ({ event }) => {
-  const { title, start, end, location, description } = event;
+  const { title, start, end, location, summary } = event;
   const startUTC = start.toISOString().replace(/-|:|\.\d\d\d/g, "");
   const endUTC = end.toISOString().replace(/-|:|\.\d\d\d/g, "");
 
@@ -63,7 +67,11 @@ const AddToCalendar = ({ event }) => {
 
   return (
     <>
-      <Button className="add-to-calendar" onClick={handleMenuOpen}>
+      <Button
+        className="add-to-calendar"
+        onClick={handleMenuOpen}
+        sx={{ width: "fit-content" }}
+      >
         Add to Calendar
         <FaCaretDown style={{ marginLeft: "5px" }} />
       </Button>
@@ -79,7 +87,7 @@ const AddToCalendar = ({ event }) => {
               <MenuItem
                 onClick={() =>
                   handleAddToCalendar(
-                    `https://www.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${startUTC}/${endUTC}&details=${description}&location=${location}`
+                    `https://www.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${startUTC}/${endUTC}&details=${summary}&location=${location}`
                   )
                 }
               >
@@ -88,7 +96,7 @@ const AddToCalendar = ({ event }) => {
               <MenuItem
                 onClick={() =>
                   handleAddToCalendar(
-                    `https://outlook.office.com/owa/?path=/calendar/action/compose&rrv=addevent&startdt=${startUTC}&enddt=${endUTC}&subject=${title}&location=${location}&body=${description}`
+                    `https://outlook.office.com/owa/?path=/calendar/action/compose&rrv=addevent&startdt=${startUTC}&enddt=${endUTC}&subject=${title}&location=${location}&body=${summary}`
                   )
                 }
               >
@@ -102,11 +110,27 @@ const AddToCalendar = ({ event }) => {
   );
 };
 
-const Event = ({ event }) => {
-  var image = "./images/events/default.jpg";
+const EventCard = ({ event }) => {
 
-  if (event.imageFile) {
-    image = "./images/events/" + event.imageFile;
+  const {
+    id,
+    title,
+    start,
+    end,
+    location,
+    summary,
+    time,
+    tags,
+    coverImageFile
+  } = event;
+
+  const tagsArr = tags.split(",").map((tag) => tag.toUpperCase()); // convert tags to array then convert to uppercase
+  const url = `/events/${id}`;
+
+  const [image, setImage] = useState(`./images/events/${coverImageFile}`);
+
+  const handleImageError = (e) => {
+    setImage("./images/events/default.jpg");
   }
 
   return (
@@ -114,46 +138,58 @@ const Event = ({ event }) => {
       item
       container
       xs={12}
-      key={event.id}
+      id={id}
       className="event"
       display="flex"
       alignItems="top"
     >
       <Grid item xs={1}>
-        <DateSquare date={event.start} />
+        <DateSquare date={start} />
       </Grid>
 
-      <Grid item md={7} marginY="1.5rem">
-        <Typography variant="h6" component="h1" fontWeight="bold">
-          {event.title}
-        </Typography>
-        <Typography variant="body1" component="p" fontWeight="normal">
-          {
-            console.log(event)
-          }
-          {event.start.getTime() !== event.end.getTime()
-            ? `${event.start.toLocaleString("default", {
+      <Grid item container md={7} marginY="1.5rem" display="flex" direction="column">
+        <a href={url} className="event-title" style={{marginBottom: "10px"}}>
+          <Typography variant="h6" component="h1" fontWeight="700" >
+            {title}
+          </Typography>
+        </a>
+        <Typography variant="body1" component="p" fontWeight="500">
+          {start.getTime() !== end.getTime()
+            ? `${start.toLocaleString("default", {
                 month: "short",
                 day: "numeric",
-              })} - ${event.end.toLocaleString("default", {
+              })} - ${end.toLocaleString("default", {
                 month: "short",
                 day: "numeric",
               })} `
             : ""}
         </Typography>
-        <Typography variant="body1" component="p" fontWeight="normal">
-          {event.location} {event.time ? `@ ${event.time} ` : ""}
+        <Typography variant="body1" component="p" fontWeight="400">
+          {location} {time ? `@ ${time} ` : ""}
         </Typography>
 
         <Typography
           variant="body1"
           component="p"
+          marginTop="10px"
           marginRight="1rem"
-          fontWeight="lighter"
+          fontWeight="200"
         >
-          {event.description}
+          {summary}
         </Typography>
+
         <AddToCalendar event={event} />
+
+        <Box sx={{ marginTop: "1rem" }}>
+          {tagsArr.map((tag, iterator) => (
+            <Chip
+              key={iterator}
+              label={tag}
+              className={`tag ${tag.toLowerCase()}`}
+              variant="outlined"
+            />
+          ))}
+        </Box>
       </Grid>
 
       <Grid item md={4} display="flex" justifyContent="center">
@@ -163,13 +199,21 @@ const Event = ({ event }) => {
             maxHeight: "100%",
             maxWidth: "100%",
             borderRadius: "0.5rem",
+            objectFit: "cover",
+            cursor: "pointer"
           }}
+          href={url}
           alt="event image"
           src={image}
+          onError={handleImageError}
+          onClick={(e) => {
+            e.preventDefault();
+            window.location.href = url;
+          }}
         />
       </Grid>
     </Grid>
   );
 };
 
-export default Event;
+export default EventCard;

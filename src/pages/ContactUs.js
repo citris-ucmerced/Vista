@@ -10,6 +10,7 @@ import { Helmet } from "react-helmet-async";
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 import "./styles/ContactUs.css";
 
@@ -39,23 +40,23 @@ const ContactUs = () => {
     <>
       <Helmet>
         <title>Contact Us</title>
-        <meta name="description" content="Have questions? Reach out and we'll be in touch!" />
+        <meta
+          name="description"
+          content="Have questions? Reach out and we'll be in touch!"
+        />
         <link rel="canonical" href="/ContactUs" />
       </Helmet>
       <Box className="page">
         <Navbar />
         <Container>
+          <Header title={"CONTACT US"} />
           <Box my={4}>
-            <Typography variant="h3" component="h1" align="center" className="page-title" gutterBottom>
-              CONTACT US
-            </Typography>
-
-            <Grid container spacing={4} sx={{ marginTop: "2rem"}}>
+            <Grid container spacing={4} sx={{ marginTop: "2rem" }}>
               {contactDetails.map((contact, index) => (
                 <Grid item xs={12} sm={6} md={3} key={index}>
                   <Card
                     sx={{
-                      height: "100%"
+                      height: "100%",
                     }}
                   >
                     <CardContent>

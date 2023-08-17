@@ -1,0 +1,22 @@
+.carousel {
+    margin: 1rem 0;
+}
+.carousel-image {
+  width: 100%;
+  height: 80vh;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .carousel-image {
+    height: 40vh;
+  }
+}
+
+.event-link {
+  color: white;
+}
+
+.event-link a {
+  color: white;
+}

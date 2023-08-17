@@ -4,7 +4,7 @@ import { Container, Typography, Box, Grid } from "@mui/material";
 
 import { readCSV } from "../utils/CSVReader";
 import eventsCSV from "../assets/sheets/events.csv";
-import Event from "../components/Event"
+import EventCard from "../components/EventCard";
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -87,8 +87,8 @@ const Events = () => {
                 <span className="line"></span>
               </Grid>
 
-              {events.map((event) => (
-                <Event event={event} />
+              {events.map((event, iterator) => (
+                <EventCard key={iterator} event={event} />
               ))}
             </Grid>
           ))}
