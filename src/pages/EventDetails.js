@@ -73,7 +73,7 @@ const ListLinks = ({ links }) => {
 const Form = ({ url }) => {
   return (
     <Box sx={{ marginY: "2rem", height: "90vh", overflow: "hidden" }}>
-      <Typography variant="h5" component="p" align="center" marginBottom="2rem"> 
+      <Typography variant="h5" component="p" align="center" marginBottom="2rem">
         Form
       </Typography>
       <Typography variant="h6" component="p">
@@ -147,7 +147,7 @@ const EventDetails = () => {
       <div>
         <Navbar />
 
-        <Container>
+        <Container sx={{ minHeight: "70vh" }}>
           <Header title={title} subtitle={subtitle} />
           <Box sx={{ marginY: "2rem" }}>
             <Typography variant="h6" component="p">
@@ -155,9 +155,7 @@ const EventDetails = () => {
             </Typography>
           </Box>
 
-          <span class="divider" />
-
-          {flyerCoverFile && flyerPdf && (
+          {flyerCoverFile && flyerPdf && <span class="divider" /> && (
             <Box>
               <a
                 href={process.env.PUBLIC_URL + "/flyers/" + flyerPdf}
@@ -173,17 +171,13 @@ const EventDetails = () => {
             </Box>
           )}
 
-          <span class="divider" />
+          {imageFiles && <span class="divider" /> && (
+            <ImageCarousel imageFiles={imageFiles} />
+          )}
 
-          {imageFiles && <ImageCarousel imageFiles={imageFiles} />}
+          {iframeSrc && <span class="divider" /> && <Form url={iframeSrc} />}
 
-          <span class="divider" />
-
-          {iframeSrc && <Form url={iframeSrc} />}
-
-          <span class="divider" />
-
-          {links && <ListLinks links={links} />}
+          {links && <span class="divider" /> && <ListLinks links={links} />}
         </Container>
 
         <Footer />
