@@ -37,7 +37,7 @@ const ListLinks = ({ links }) => {
   }
 
   return (
-    <Box>
+    <Box marginTop="3rem" marginBottom="5rem">
       <Typography variant="h5" component="p" align="center">
         Links
       </Typography>
@@ -73,6 +73,9 @@ const ListLinks = ({ links }) => {
 const Form = ({ url }) => {
   return (
     <Box sx={{ marginY: "2rem", height: "90vh", overflow: "hidden" }}>
+      <Typography variant="h5" component="p" align="center" marginBottom="2rem"> 
+        Form
+      </Typography>
       <Typography variant="h6" component="p">
         <iframe
           src={url}
@@ -87,21 +90,26 @@ const ImageCarousel = ({ imageFiles }) => {
   const images = imageFiles.split(",").map((img) => img.trim()); // split by comma and remove whitespace
 
   return (
-    <Carousel
-      autoplay={true}
-      wrapAround={true}
-      swiping={true}
-      className="carousel"
-    >
-      {images.map((image, index) => (
-        <img
-          key={index}
-          src={process.env.PUBLIC_URL + "/images/events/" + image}
-          alt="Event"
-          className="carousel-image"
-        />
-      ))}
-    </Carousel>
+    <>
+      <Typography variant="h5" component="p" align="center">
+        Slideshow
+      </Typography>
+      <Carousel
+        autoplay={true}
+        wrapAround={true}
+        swiping={true}
+        className="carousel"
+      >
+        {images.map((image, index) => (
+          <img
+            key={index}
+            src={process.env.PUBLIC_URL + "/images/events/" + image}
+            alt="Event"
+            className="carousel-image"
+          />
+        ))}
+      </Carousel>
+    </>
   );
 };
 
@@ -124,6 +132,8 @@ const EventDetails = () => {
     imageFiles,
     iframeSrc,
     links,
+    flyerCoverFile,
+    flyerPdf,
   } = event;
 
   const subtitle = ` ${location} @ ${time} on ${start}`;
@@ -145,11 +155,35 @@ const EventDetails = () => {
             </Typography>
           </Box>
 
-          {links && <ListLinks links={links} />}
+          <span class="divider" />
+
+          {flyerCoverFile && flyerPdf && (
+            <Box>
+              <a
+                href={process.env.PUBLIC_URL + "/flyers/" + flyerPdf}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={process.env.PUBLIC_URL + "/flyers/" + flyerCoverFile}
+                  alt="Event"
+                  className="flyer-image"
+                />
+              </a>
+            </Box>
+          )}
+
+          <span class="divider" />
 
           {imageFiles && <ImageCarousel imageFiles={imageFiles} />}
 
+          <span class="divider" />
+
           {iframeSrc && <Form url={iframeSrc} />}
+
+          <span class="divider" />
+
+          {links && <ListLinks links={links} />}
         </Container>
 
         <Footer />

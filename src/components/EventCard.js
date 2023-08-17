@@ -14,7 +14,7 @@ import {
 
 import { FaCaretDown } from "react-icons/fa";
 
-import "./styles/Event.css";
+import "./styles/EventCard.css";
 
 const DateSquare = ({ date }) => {
   const day = date.toLocaleString("default", { day: "numeric" });
