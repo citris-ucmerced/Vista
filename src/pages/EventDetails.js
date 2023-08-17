@@ -144,18 +144,26 @@ const EventDetails = () => {
         <meta name="description" content="" />
       </Helmet>
 
-      <div>
+      <div className="page">
         <Navbar />
 
-        <Container sx={{ minHeight: "70vh" }}>
+        <Container sx={{ minHeight: "90vh" }}>
           <Header title={title} subtitle={subtitle} />
+
           <Box sx={{ marginY: "2rem" }}>
-            <Typography variant="h6" component="p">
+            <Typography
+              variant="h6"
+              component="p"
+              className="custom-card"
+              padding="1rem"
+            >
               {description}
             </Typography>
           </Box>
 
-          {flyerCoverFile && flyerPdf && <span class="divider" /> && (
+          {flyerCoverFile && flyerPdf && <span className="divider" />}
+
+          {flyerCoverFile && flyerPdf && (
             <Box>
               <a
                 href={process.env.PUBLIC_URL + "/flyers/" + flyerPdf}
@@ -171,13 +179,14 @@ const EventDetails = () => {
             </Box>
           )}
 
-          {imageFiles && <span class="divider" /> && (
-            <ImageCarousel imageFiles={imageFiles} />
-          )}
+          {imageFiles && <span className="divider" />}
+          {imageFiles && <ImageCarousel imageFiles={imageFiles} />}
 
-          {iframeSrc && <span class="divider" /> && <Form url={iframeSrc} />}
+          {iframeSrc && <span className="divider" />}
+          {iframeSrc && <Form url={iframeSrc} />}
 
-          {links && <span class="divider" /> && <ListLinks links={links} />}
+          {links && <span className="divider" />}
+          {links && <ListLinks links={links} />}
         </Container>
 
         <Footer />
