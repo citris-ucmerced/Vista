@@ -5,11 +5,7 @@
     url("../../assets/images/santa-margarita.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  min-height: fit-content;
   padding: 4rem 0 3rem 0;
 }
 
@@ -19,6 +15,10 @@
   display: flex;
   justify-content: center;
   object-fit: contain;
+}
+
+.home-logo img {
+  object-fit: cover;
 }
 
 .home-subtitle {
