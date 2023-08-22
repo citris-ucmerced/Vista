@@ -20,7 +20,7 @@ const Home = () => {
       <div>
         <Navbar />
         <Box className="home-banner">
-          <Box className="home-logo" >
+          <Box className="home-logo" xs={12}>
             <img src={logoExtendedWhite} alt="Vista Logo White" />
           </Box>
           <Typography
