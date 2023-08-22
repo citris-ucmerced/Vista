@@ -6,23 +6,24 @@ This guide explains how to upload events to the Vista website using a CSV file. 
 
 ## CSV File Format
 
-The CSV file should have the following headers:
 
-- id: Unique identifier that is used to route to the event. For example, an id of `potluck_2023` would have a route of `https://vista.ucmerced.edu/events/potluck_2023`.
+The CSV file should have the following headers(Underlined columns are required):
 
-- title: Title of the event.
+- <ins>id</ins>: Unique identifier that is used to route to the event. For example, an id of `potluck_2023` would have a route of `https://vista.ucmerced.edu/events/potluck_2023`.
 
-- start: Start date in format MM/DD/YYYY.
+- <ins>title</ins>: Title of the event.
 
-- end: End date in format MM/DD/YYYY.
+- <ins>start</ins>: Start date in format MM/DD/YYYY.
 
-- location: Name of location where event takes place.
+- <ins>end</ins>: End date in format MM/DD/YYYY.
 
-- time: Time that event starts in format HH:MM:SS AM.
+- <ins>location</ins>: Name of location where event takes place.
 
-- summary: Quick summary of event.
+- time: Time that event starts in format HH:MM:SS AM/PM.
 
-- description: Detailed description of event.
+- <ins>summary</ins>: Quick summary of event.
+
+- <ins>description</ins>: Detailed description of event.
 
 - tags: Static tags to be added to event.
 
