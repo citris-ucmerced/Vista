@@ -30,21 +30,21 @@ const Navbar = () => {
       sublinks: [
         {
           name: "People",
-          route: "/People",
+          route: "/people",
         },
         {
           name: "Location",
-          route: "/Location",
+          route: "/location",
         },
         {
           name: "Events",
-          route: "/Events",
+          route: "/events",
         }
       ],
     },
     {
       name: "Contact Us",
-      route: "/ContactUs",
+      route: "/contactus",
       icon: FaAddressBook,
     },
   ];
