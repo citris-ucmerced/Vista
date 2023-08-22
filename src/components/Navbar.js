@@ -1,10 +1,5 @@
 import { Link } from "react-router-dom";
-import {
-  AppBar,
-  Toolbar,
-  Box,  Button,
-  SwipeableDrawer,
-} from "@mui/material";
+import { AppBar, Toolbar, Box, Button, SwipeableDrawer } from "@mui/material";
 import { useState } from "react";
 
 import { FaHome, FaUsers, FaAddressBook } from "react-icons/fa";
@@ -17,6 +12,7 @@ import DropdownLink from "./DropdownLink";
 import "./styles/Navbar.css";
 
 const Navbar = () => {
+  // Define the routes for the navbar
   const routes = [
     {
       name: "Home",
@@ -39,7 +35,7 @@ const Navbar = () => {
         {
           name: "Events",
           route: "/events",
-        }
+        },
       ],
     },
     {
@@ -49,8 +45,10 @@ const Navbar = () => {
     },
   ];
 
+  // Define state for the sidebar
   const [open, setOpen] = useState(false);
 
+  // Toggle the sidebar
   const toggleDrawer = (open) => (event) => {
     if (
       event &&
@@ -65,6 +63,7 @@ const Navbar = () => {
   return (
     <AppBar className="navbar">
       <Toolbar>
+        {/* Logo */}
         <Box component="image">
           <img
             className="logo"
@@ -74,10 +73,12 @@ const Navbar = () => {
           />
         </Box>
 
+        {/* Hamburger menu */}
         <Button onClick={toggleDrawer(true)} id="hamburger-menu">
           <MenuIcon />
         </Button>
 
+        {/* Sidebar */}
         <SwipeableDrawer
           anchor="right"
           open={open}
@@ -87,9 +88,11 @@ const Navbar = () => {
           <SideBar routes={routes} toggleDrawer={toggleDrawer} />
         </SwipeableDrawer>
 
+        {/* Navigation links */}
         <div className="nav">
           {routes.map((route) => {
             if (route.sublinks === undefined) {
+              // Regular link
               return (
                 <Link to={route.route} className="nav-link" key={route.name}>
                   <route.icon />
@@ -99,9 +102,8 @@ const Navbar = () => {
                 </Link>
               );
             } else {
-              return (
-                <DropdownLink route={route} key={route.name} />
-              );
+              // Dropdown link
+              return <DropdownLink route={route} key={route.name} />;
             }
           })}
         </div>

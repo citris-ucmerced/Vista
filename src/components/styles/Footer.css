@@ -8,3 +8,39 @@
   color: black;
   background-color: #2c6274;
 }
+
+.footer-title {
+  background-color: #daa900;
+  border-radius: 1rem;
+  color: white;
+  font-weight: bold;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-line {
+  background-color: #daa900;
+  height: 5px;
+  left: 50%;
+  position: absolute;
+  top: 18%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  z-index: 1;
+}
+
+.footer-icons > * {
+  background-color: #c1cac5;
+  border-radius: 8px;
+  color: white;
+  padding: 0.5rem;
+}
+
+.footer-text {
+  background-color: #e7eae8;
+  border-radius: 8px;
+  color: #8b9790;
+  padding: 0.75em 2em 0.75em 2em;
+}

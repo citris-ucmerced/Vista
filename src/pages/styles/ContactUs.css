@@ -1,5 +1,36 @@
 /* Contact Us */
 
+.contact-grid {
+  margin-top: 2rem;
+}
+
+.contact-card {
+  height: 100%;
+}
+
+.contact-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.contact-detail {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.contact-form {
+  width: 100%;
+  height: 500px;
+  border: none;
+}
+
+.contact-iframe {
+  width: 100%;
+  height: 500px;
+  border: none;
+}
+
 /*  Desktop View */
 @media screen and (min-width: 790px) {
   .contact-us-container {

@@ -1,6 +1,7 @@
 import { Grid, Typography, Box } from "@mui/material";
 
 const StudentSection = ({ name, title, description, imageFile }) => {
+  // Construct the image path
   const image = "./images/people/" + imageFile;
 
   return (
@@ -14,6 +15,7 @@ const StudentSection = ({ name, title, description, imageFile }) => {
       justifyContent="center"
       alignContent="center"
     >
+      {/* Student image */}
       <Grid item>
         <Box
           component="img"
@@ -26,6 +28,7 @@ const StudentSection = ({ name, title, description, imageFile }) => {
           src={image}
         />
       </Grid>
+      {/* Student name and title */}
       <Grid item sx={{ textAlign: "center", "&>*": { padding: "0.5rem" } }}>
         <Typography variant="h5" fontWeight="bold">
           {name.toUpperCase()}

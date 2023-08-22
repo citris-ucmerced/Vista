@@ -23,7 +23,9 @@
 }
 
 .home-subtitle {
-  max-height: 45vh;
+  font-size: 1.4rem;
+  margin-inline: 3rem;
+  margin-top: 4rem;
 }
 
 /* Desktop View */

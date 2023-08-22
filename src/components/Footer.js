@@ -21,50 +21,31 @@ const Footer = () => {
         spacing={5}
         p={1}
       >
+        {/* Footer title */}
         <Box>
           <Typography
             variant="h5"
             component="h1"
             align="center"
             gutterBottom
-            sx={{
-              color: "white",
-              fontWeight: "bold",
-              backgroundColor: "#daa900",
-              paddingX: "2rem",
-              borderRadius: "1rem",
-              zIndex: 2,
-              position: "relative"
-            }}
+            className="footer-title"
           >
             GET IN TOUCH
           </Typography>
+          {/* Footer line */}
           <span
-            style={{
-              position: "absolute",
-              top: "18%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              width: "70%",
-              height: "5px",
-              backgroundColor: "#daa900",
-              zIndex: 1,
-            }}
+            className='footer-line'
           />
         </Box>
+
+        {/* Footer icons */}
         <Stack
           direction="row"
           justifyContent="center"
           spacing={3}
-          sx={{
-            "& > *": {
-              color: "white",
-              backgroundColor: "#c1cac5",
-              padding: "0.5rem",
-              borderRadius: "8px",
-            },
-          }}
+          className="footer-icons"
         >
+          {/* Home button */}
           <a
             href="/"
             rel="noopener noreferrer"
@@ -73,6 +54,7 @@ const Footer = () => {
           >
             <AiFillHome size={40} />
           </a>
+          {/* Instagram button */}
           <a
             href="https://www.instagram.com/vista.ucmerced/"
             target="_blank"
@@ -82,6 +64,7 @@ const Footer = () => {
           >
             <FaInstagram size={40} />
           </a>
+          {/* Email button */}
           <a
             href="mailto:vista.ucmerced@gmail.com"
             target="_blank"
@@ -93,14 +76,10 @@ const Footer = () => {
           </a>
         </Stack>
 
+        {/* Footer text */}
         <Typography
           variant="body1"
-          sx={{
-            color: "#8b9790",
-            backgroundColor: "#e7eae8",
-            borderRadius: "8px",
-            padding: "0.75em 2em 0.75em 2em",
-          }}
+          className="footer-text"
         >
           © VISTA 2023 | <Link to="/ContactUs" style={{color: "#8b9790"}}>Contact Us</Link>
         </Typography>

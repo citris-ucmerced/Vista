@@ -14,21 +14,16 @@ import eventsCSV from "../assets/sheets/events.csv";
 
 import "./styles/EventDetails.css";
 
+// Component to render the list of links
 const ListLinks = ({ links }) => {
-  /*
-    parses title within [], link within "", splits by comma, and removes whitespaces
-    
-    e.g.
-      input: ' [Google]"https://www.google.com", [Facebook]"https://www.facebook.com" '
-
-      output: [['Google', 'https://www.google.com'], ['Facebook', 'https://www.facebook.com']]
-  */
-
+  // Regular expression to parse the title and link from the input string
   const parseTitleAndLinkRegex = /\[(.*?)\]"\s*(.*?)\s*"(?:\s*,\s*|$)/g;
 
-  let match;
+  // Array to hold the parsed title and link pairs
   let pairs = [];
 
+  // Loop through the input string and extract the title and link pairs
+  let match;
   while ((match = parseTitleAndLinkRegex.exec(links))) {
     const title = match[1].trim();
     const url = match[2].trim();
@@ -36,6 +31,7 @@ const ListLinks = ({ links }) => {
     pairs.push(newPair);
   }
 
+  // Render the list of links
   return (
     <Box marginTop="3rem" marginBottom="5rem">
       <Typography variant="h5" component="p" align="center">
@@ -70,6 +66,7 @@ const ListLinks = ({ links }) => {
   );
 };
 
+// Component to render the form
 const Form = ({ url }) => {
   return (
     <Box sx={{ marginY: "2rem", height: "90vh", overflow: "hidden" }}>
@@ -86,9 +83,12 @@ const Form = ({ url }) => {
   );
 };
 
+// Component to render the image carousel
 const ImageCarousel = ({ imageFiles }) => {
-  const images = imageFiles.split(",").map((img) => img.trim()); // split by comma and remove whitespace
+  // Split the image file names by comma and remove whitespace
+  const images = imageFiles.split(",").map((img) => img.trim());
 
+  // Render the image carousel
   return (
     <>
       <Typography variant="h5" component="p" align="center">
@@ -114,8 +114,10 @@ const ImageCarousel = ({ imageFiles }) => {
 };
 
 const EventDetails = () => {
+  // Get the id parameter from the URL
   const { id } = useParams();
 
+  // State to hold the event data
   const [event, setEvent] = useState({});
 
   // Use the id parameter to fetch data for the event with that id
@@ -123,6 +125,7 @@ const EventDetails = () => {
     getRowById(eventsCSV, id, setEvent);
   }, []);
 
+  // Extract the event data
   const {
     title,
     description,
@@ -136,7 +139,10 @@ const EventDetails = () => {
     flyerPdf,
   } = event;
 
+  // Generate the subtitle
   const subtitle = ` ${location} @ ${time} on ${start}`;
+
+  // Render the event details page
   return (
     <>
       <Helmet>
@@ -148,8 +154,10 @@ const EventDetails = () => {
         <Navbar />
 
         <Container sx={{ minHeight: "90vh" }}>
+          {/* Render the header */}
           <Header title={title} subtitle={subtitle} />
 
+          {/* Render the event description */}
           <Box sx={{ marginY: "2rem" }}>
             <Typography
               variant="h6"
@@ -161,8 +169,8 @@ const EventDetails = () => {
             </Typography>
           </Box>
 
+          {/* Conditionally render the event flyer */}
           {flyerCoverFile && flyerPdf && <span className="divider" />}
-
           {flyerCoverFile && flyerPdf && (
             <Box>
               <a
@@ -179,12 +187,15 @@ const EventDetails = () => {
             </Box>
           )}
 
+          {/* Conditionally render the image carousel */}
           {imageFiles && <span className="divider" />}
           {imageFiles && <ImageCarousel imageFiles={imageFiles} />}
 
+          {/*Conditionally  render the form */}
           {iframeSrc && <span className="divider" />}
           {iframeSrc && <Form url={iframeSrc} />}
 
+          {/* Conditionally render the list of links */}
           {links && <span className="divider" />}
           {links && <ListLinks links={links} />}
         </Container>

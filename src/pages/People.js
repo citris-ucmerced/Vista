@@ -16,6 +16,7 @@ import StudentSection from "../components/StudentSection";
 import "./styles/People.css"
 
 const People = () => {
+  // State for staff data and staff array
   const [staffData, setStaffData] = useState([]);
   const [staff, setStaff] = useState([]);
 
@@ -37,6 +38,7 @@ const People = () => {
     }
   }, [staffData]);
 
+  // State for student data and student array
   const [studentData, setStudentData] = useState([]);
   const [students, setStudents] = useState([]);
 
@@ -60,6 +62,7 @@ const People = () => {
 
   return (
     <>
+      {/* Helmet for SEO */}
       <Helmet>
         <title>People</title>
         <meta name="description" content="Get to know the VISTA team!" />
@@ -67,10 +70,13 @@ const People = () => {
       </Helmet>
 
       <div>
+        {/* Navbar component */}
         <Navbar />
         <Container>
+          {/* Header component */}
           <Header title="GET TO KNOW US!" subtitle="MEET THE PEOPLE THAT MAKE VISTA WHAT IT IS" />
 
+          {/* Staff section */}
           <Box>
             {staff?.map((person, idx) => (
               <StaffSection
@@ -83,6 +89,7 @@ const People = () => {
             ))}
           </Box>
 
+          {/* Student section */}
           <Box>
             <Typography
               variant="h4"
@@ -107,6 +114,7 @@ const People = () => {
             </Grid>
           </Box>
         </Container>
+        {/* Footer component */}
         <Footer />
       </div>
     </>

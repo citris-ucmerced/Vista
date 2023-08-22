@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { Menu, MenuItem, Box } from "@mui/material";
 import { Link } from "react-router-dom";
 
@@ -8,19 +8,22 @@ const DropdownLink = ({ route }) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
 
+  // Open the dropdown menu when the user clicks on the link
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
 
+  // Close the dropdown menu when the user clicks outside of it
   const handleClose = () => {
     setAnchorEl(null);
   };
 
+  // Close the dropdown menu when the user scrolls
   useEffect(() => {
     document.addEventListener("scroll", handleClose, true);
   }, []);
 
-  // on unmount, remove the scroll event listener
+  // Remove the event listener when the component unmounts
   useEffect(
     () => () => {
       document.removeEventListener("scroll", handleClose, true);
@@ -29,14 +32,15 @@ const DropdownLink = ({ route }) => {
   );
 
   return (
-
     <div>
+      {/* The link that opens the dropdown menu */}
       <Box onClick={handleClick} className="nav-link">
         <route.icon />
         <Box sx={{ marginInline: "10px" }}>{route.name.toUpperCase()}</Box>
         <FaCaretDown className="flipped-icon" />
       </Box>
 
+      {/* The dropdown menu */}
       <Menu
         anchorEl={anchorEl}
         getContentAnchorEl={null}
@@ -53,6 +57,7 @@ const DropdownLink = ({ route }) => {
         }}
         sx={{ marginTop: "5px" }}
       >
+        {/* The sublinks in the dropdown menu */}
         {route.sublinks.map((sublink, index) => (
           <MenuItem sx={{ width: "140px" }} key={index}>
             <Link

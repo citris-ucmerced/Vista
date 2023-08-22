@@ -13,7 +13,7 @@ const Home = () => {
     <>
       <Helmet>
         <title>VISTA</title>
-        <meta name="description" content="" />
+        <meta name="description" content="Vista" />
         <link rel="canonical" href="/" />
       </Helmet>
 
@@ -28,12 +28,6 @@ const Home = () => {
               className="home-subtitle"
               component="p"
               align="center"
-              sx={{
-                fontSize: "1.4rem",
-                marginInline: "3rem",
-                marginTop: "4rem",
-                maxHeight:"170px"
-              }}
               gutterBottom
             >
               The Valley Institute for Sustainability, Technology & Agriculture,

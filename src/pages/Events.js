@@ -12,20 +12,26 @@ import Footer from "../components/Footer";
 import "./styles/Events.css";
 
 const Events = () => {
+  // State to hold the CSV data
   const [csvData, setCsvData] = useState([]);
+  // State to hold the grouped data
   const [groupedData, setGroupedData] = useState({});
 
+  // Load the CSV data on component mount
   useEffect(() => {
     readCSV(eventsCSV, setCsvData);
   }, []);
 
+  // Group the CSV data by month and year on change of CSV data
   useEffect(() => {
+    // Convert the date strings to Date objects
     csvData?.map((item) => {
       item.start = new Date(item.start);
       item.end = new Date(item.end);
       return item;
     });
 
+    // Group the data by month and year
     const data = csvData.reduce((acc, item) => {
       const monthAndYear = item.start.toLocaleString("default", {
         month: "long",
@@ -40,6 +46,7 @@ const Events = () => {
       return acc;
     }, {});
 
+    // Set the grouped data state
     setGroupedData(data);
   }, [csvData]);
 
@@ -78,15 +85,19 @@ const Events = () => {
             </Typography>
           </Box>
 
+          {/* Render the grouped data */}
           {Object.entries(groupedData).map(([monthAndYear, events]) => (
             <Grid container key={monthAndYear} sx={{ marginBottom: "2rem" }}>
               <Grid item xs={12} className="section">
+                {/* Render the month and year */}
                 <Typography variant="h6" sx={{ width: "fit-content" }}>
                   {monthAndYear}
                 </Typography>
+                {/* Render the line separator */}
                 <span className="line"></span>
               </Grid>
 
+              {/* Render the event cards */}
               {events.map((event, iterator) => (
                 <EventCard key={iterator} event={event} />
               ))}

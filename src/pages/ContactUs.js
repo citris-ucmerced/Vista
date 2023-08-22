@@ -15,6 +15,7 @@ import Header from "../components/Header";
 import "./styles/ContactUs.css";
 
 const ContactUs = () => {
+  // Contact details to display on the page
   const contactDetails = [
     {
       title: "Phone Number",
@@ -49,30 +50,37 @@ const ContactUs = () => {
       <Box className="page">
         <Navbar />
         <Container>
+          {/* Render the page header */}
           <Header title={"CONTACT US"} />
+
           <Box my={4}>
-            <Grid container spacing={4} sx={{ marginTop: "2rem" }}>
+            {/* Render the contact details */}
+            <Grid container spacing={4} className="contact-grid">
               {contactDetails.map((contact, index) => (
                 <Grid item xs={12} sm={6} md={3} key={index}>
-                  <Card
-                    sx={{
-                      height: "100%",
-                    }}
-                  >
+                  <Card className="contact-card">
                     <CardContent>
-                      <Typography variant="h6">{contact.title}</Typography>
-                      <Typography paragraph>{contact.detail}</Typography>
+                      <Typography variant="h6" className="contact-title">
+                        {contact.title}
+                      </Typography>
+                      <Typography
+                        paragraph
+                        className="contact-detail"
+                      >
+                        {contact.detail}
+                      </Typography>
                     </CardContent>
                   </Card>
                 </Grid>
               ))}
             </Grid>
 
+            {/* Render the contact form */}
             <Box mt={4} p={2} className="contact-form">
               <iframe
                 src="https://forms.office.com/Pages/ResponsePage.aspx?id=o-nf9HjKmEm3p-bQaS6s5lrVrUVtHU9Dro4-qcn7tzhUNFhDNDBYUlhUOURaSzJMM0c1VENGOFQwWS4u&embed=true"
                 title="Contact Us Microsoft Form"
-                style={{ width: "100%", height: "500px", border: "none" }}
+                className="contact-iframe"
               />
             </Box>
           </Box>
