@@ -4,6 +4,7 @@ import { Container, Box, Typography, Grid } from "@mui/material";
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 import { readCSV } from "../utils/CSVReader";
 import staffCSV from "../assets/sheets/staff.csv";
@@ -68,26 +69,7 @@ const People = () => {
       <div>
         <Navbar />
         <Container>
-          <Box my={4}>
-            <Typography
-              variant="h3"
-              component="h1"
-              align="center"
-              className="page-title"
-              gutterBottom
-            >
-              GET TO KNOW US!
-            </Typography>
-            <Typography
-              variant="h6"
-              component="h1"
-              align="center"
-              fontWeight="bold"
-              color="RGB(184, 192, 195)"
-            >
-              MEET THE PEOPLE THAT MAKE VISTA WHAT IT IS
-            </Typography>
-          </Box>
+          <Header title="GET TO KNOW US!" subtitle="MEET THE PEOPLE THAT MAKE VISTA WHAT IT IS" />
 
           <Box>
             {staff?.map((person, idx) => (

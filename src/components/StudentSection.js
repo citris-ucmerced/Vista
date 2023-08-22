@@ -1,4 +1,4 @@
-import { Grid, Typography, Box, Tooltip } from "@mui/material";
+import { Grid, Typography, Box } from "@mui/material";
 
 const StudentSection = ({ name, title, description, imageFile }) => {
   const image = "./images/people/" + imageFile;

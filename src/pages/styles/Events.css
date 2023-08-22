@@ -1,0 +1,14 @@
+.section {
+  display: flex;
+  align-items: center;
+  margin: 1rem 2rem;
+}
+
+.line {
+  flex: 1;
+  height: 2px;
+  background-color: white;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+

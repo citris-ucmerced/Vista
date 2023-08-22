@@ -3,10 +3,11 @@ import { Container, Box, Typography, Grid } from "@mui/material";
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 import ACS from "../assets/images/acs.jpeg";
 
-import "./styles/Location.css"
+import "./styles/Location.css";
 
 const Location = () => {
   return (
@@ -20,27 +21,13 @@ const Location = () => {
       <div>
         <Navbar />
         <Container>
-          <Box my={4}>
-            <Typography
-              variant="h3"
-              component="h1"
-              align="center"
-              className="page-title"
-              gutterBottom
-            >
-              OUR LOCATION
-            </Typography>
-            <Typography
-              variant="h6"
-              component="h1"
-              align="center"
-              fontWeight="bold"
-              color="RGB(184, 192, 195)"
-            >
-              VISTA office is located on the third floor of the Arts and
-              Computational Sciences, adjacent to the Pavilion.
-            </Typography>
-          </Box>
+          <Header
+            title={"OUR LOCATION"}
+            subtitle={
+              "VISTA office is located on the third floor of the Arts and Computational Sciences, adjacent to the Pavilion."
+            }
+          />
+
           <Grid sx={{ flexGrow: 1 }} container spacing={2} my={4}>
             <Grid item sm={12} md={6}>
               <img
