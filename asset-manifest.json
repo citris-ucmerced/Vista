@@ -1,9 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.e52a3769.css",
+    "main.css": "/static/css/main.3b9c1665.css",
     "main.js": "/static/js/main.931589a9.js",
     "static/js/787.2667ce32.chunk.js": "/static/js/787.2667ce32.chunk.js",
-    "static/media/santa-margarita.jpg": "/static/media/santa-margarita.af88cea7b50708f2a29f.jpg",
     "static/media/acs.jpeg": "/static/media/acs.9fe81be4ad1d75875ca0.jpeg",
     "static/media/logo.png": "/static/media/logo.dc104983539196e01750.png",
     "static/media/VISTA-Logo-Final-PNG-Color.png": "/static/media/VISTA-Logo-Final-PNG-Color.843c989caf050fbf65ef.png",
@@ -11,12 +10,12 @@
     "static/media/events.csv": "/static/media/events.48b3baf4d5c97af86e37.csv",
     "index.html": "/index.html",
     "static/media/students.csv": "/static/media/students.40aae96795081778ab3b.csv",
-    "main.e52a3769.css.map": "/static/css/main.e52a3769.css.map",
+    "main.3b9c1665.css.map": "/static/css/main.3b9c1665.css.map",
     "main.931589a9.js.map": "/static/js/main.931589a9.js.map",
     "787.2667ce32.chunk.js.map": "/static/js/787.2667ce32.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e52a3769.css",
+    "static/css/main.3b9c1665.css",
     "static/js/main.931589a9.js"
   ]
 }
