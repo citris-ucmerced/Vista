@@ -1,14 +1,12 @@
 /* Home.js */
 
 .home-banner {
-  background-image: linear-gradient(to top, #0e2c53, transparent 60%), url("../../assets/images/santa-margarita.jpg");
+  background-image: linear-gradient(to top,#2c6274 7%, #5B7AA2 100%, transparent 70%);
   background-repeat: no-repeat;
   background-size: cover;
   min-height: fit-content;
   padding: 4rem 0 3rem 0;
   overflow: hidden;
-  filter: blur(100%);
-  -webkit-filter: blur(100%);
 }
 
 .home-logo {
