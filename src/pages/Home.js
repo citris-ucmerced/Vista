@@ -31,7 +31,7 @@ const Home = () => {
               gutterBottom
             >
               The Valley Institute for Sustainability, Technology & Agriculture,
-              is a fully-functioning research unit within the University of
+              is a research unit at the University of
               California, Merced.
             </Typography>
           </Grid>
