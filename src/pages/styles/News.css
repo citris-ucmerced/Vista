@@ -1,0 +1,43 @@
+/* News.js */
+
+.news-link {
+    text-decoration: none;
+  }
+  
+  .news-card-container {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+  }
+
+  .news-card-container.home {
+    margin-bottom: 1rem;
+  }
+
+  .news-card {
+    display: flex;
+    flex-direction: column;
+    height: 31rem;
+    width: 21rem;
+  }
+  
+  .news-card-image {
+    height: 40%;
+  }
+  
+  .news-card-text {
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .news-card-description {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    overflow: scroll;
+    overflow-x: hidden;
+    /* height = (total line height of description / lineheigt of text) * lineheigt of text */
+  }
+  
