@@ -62,10 +62,10 @@ const News = () => {
               </Typography>
               <br></br>
           </box>
+          </Container>
           <Box className="news-card-container" mb={12}>
             {newsCards}
           </Box>
-          </Container>
         <Footer />
       </div>
     </>
