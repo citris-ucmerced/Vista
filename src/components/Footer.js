@@ -81,7 +81,7 @@ const Footer = () => {
           variant="body1"
           className="footer-text"
         >
-          © VISTA 2023 | <Link to="/ContactUs" style={{color: "#8b9790"}}>Contact Us</Link>
+          © HelloVISTA 2023 | <Link to="/ContactUs" style={{color: "#8b9790"}}>Contact Us</Link>
         </Typography>
       </Stack>
     </Box>
