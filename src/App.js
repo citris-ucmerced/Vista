@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { StyledEngineProvider } from "@mui/material/styles";
+import ReactDOM from 'react-dom';
 
 import Home from "./pages/Home.js";
 import People from "./pages/People.js";
