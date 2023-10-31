@@ -66,7 +66,7 @@ const Home = () => {
               gutterBottom = "false"
             >
               The Valley Institute for Sustainability, Technology & Agriculture,
-              is a research centr at the University of
+              is a research center at the University of
               California, Merced.
             </Typography>
           </Grid>
