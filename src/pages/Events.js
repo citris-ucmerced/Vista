@@ -3,7 +3,8 @@ import { Helmet } from "react-helmet-async";
 import { Container, Typography, Box, Grid } from "@mui/material";
 
 import { readCSV } from "../utils/CSVReader";
-import eventsCSV from "../assets/sheets/events.csv";
+// import eventsCSV from "../assets/sheets/events.csv";
+import eventsCSV from "../assets/sheets/eventGrabbed.csv"
 import EventCard from "../components/EventCard";
 
 import Navbar from "../components/Navbar";
