@@ -6,6 +6,7 @@ import Carousel from "nuka-carousel";
 
 import { getRowById } from "../utils/CSVReader.js";
 
+
 import Navbar from "../components/Navbar.js";
 import Footer from "../components/Footer.js";
 import Header from "../components/Header.js";
@@ -27,20 +28,32 @@ const ListLinks = ({ links }) => {
   while ((match = parseTitleAndLinkRegex.exec(links))) {
     const title = match[1].trim();
     const url = match[2].trim();
+
     const newPair = [title, url];
     pairs.push(newPair);
   }
-
   // Render the list of links
   return (
     <Box marginTop="3rem" marginBottom="5rem">
       <Typography variant="h5" component="p" align="center">
         Links
       </Typography>
-      <Box sx={{ marginLeft: "2rem", marginTop: "1rem"}}>
-        <ul>
-          {pairs.map((pair, index) => {
-            return (
+      <ul>
+        <Typography 
+          variant="h6"
+          align="center"
+          component="p"
+          // className="event-link"
+          title={`Visit ${links} website`}
+          // key={links}
+        >
+          <a class="link" href={links} aria-label={links}>Event Info</a>
+        </Typography>
+      </ul>
+      {pairs.length > 0 && (
+        <Box sx={{ marginLeft: "2rem", marginTop: "1rem" }}>
+          <ul>
+            {pairs.map((pair, index) => (
               <Typography
                 variant="h6"
                 component="p"
@@ -58,10 +71,11 @@ const ListLinks = ({ links }) => {
                   </a>
                 </li>
               </Typography>
-            );
-          })}
-        </ul>
-      </Box>
+            ))}
+          </ul>
+        </Box>
+        
+      )}
     </Box>
   );
 };
@@ -92,10 +106,10 @@ const ImageCarousel = ({ imageFiles }) => {
   return (
     <>
       <Typography variant="h5" component="p" align="center">
-        Slideshow
+
       </Typography>
       <Carousel
-        autoplay={true}
+        autoplay={false}
         wrapAround={true}
         swiping={true}
         className="carousel"
@@ -125,24 +139,27 @@ const EventDetails = () => {
     getRowById(eventsCSV, id, setEvent);
   }, []);
 
-  // Extract the event data
-  const {
-    title,
+  //csv elements for specific event
+  const{
+    coverImageFile,
     description,
-    start,
-    time,
-    location,
-    imageFiles,
-    iframeSrc,
-    links,
     flyerCoverFile,
-    flyerPdf,
+    iframeSrc,
+    imageFiles,
+    links,
+    location,
+    start,
+    summary,
+    tags,
+    time,
+    title
   } = event;
 
   // Generate the subtitle
   const subtitle = ` ${location} @ ${time} on ${start}`;
 
   // Render the event details page
+  console.log('Flyer Cover File:', event);
   return (
     <>
       <Helmet>
@@ -152,11 +169,11 @@ const EventDetails = () => {
 
       <div className="page">
         <Navbar />
-
+        
         <Container sx={{ minHeight: "90vh" }}>
           {/* Render the header */}
           <Header title={title} subtitle={subtitle} />
-
+           
           {/* Render the event description */}
           <Box sx={{ marginY: "2rem" }}>
             <Typography
@@ -165,16 +182,16 @@ const EventDetails = () => {
               className="custom-card"
               padding="1rem"
             >
-              {description}
+              {summary}
             </Typography>
           </Box>
 
           {/* Conditionally render the event flyer */}
-          {flyerCoverFile && flyerPdf && <span className="divider" />}
-          {flyerCoverFile && flyerPdf && (
+          {flyerCoverFile && description && <span className="divider" />}
+          {flyerCoverFile && description && (
             <Box>
               <a
-                href={process.env.PUBLIC_URL + "/flyers/" + flyerPdf}
+                href={process.env.PUBLIC_URL + "/flyers/" + description}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -185,19 +202,38 @@ const EventDetails = () => {
                 />
               </a>
             </Box>
-          )}
+          )}  
+          {console.log(flyerCoverFile)}
 
           {/* Conditionally render the image carousel */}
-          {imageFiles && <span className="divider" />}
-          {imageFiles && <ImageCarousel imageFiles={imageFiles} />}
+          {imageFiles ? (
+            <ImageCarousel imageFiles={imageFiles} />
+          ) : (
+            <div className="">
+              <img
+              // key={index}
+              src={process.env.PUBLIC_URL + "/images/events/" + coverImageFile}
+              alt="Event"
+              className="carousel-image"
+            />
+            </div>
+          )}
 
           {/*Conditionally  render the form */}
           {iframeSrc && <span className="divider" />}
-          {iframeSrc && <Form url={iframeSrc} />}
-
-          {/* Conditionally render the list of links */}
-          {links && <span className="divider" />}
-          {links && <ListLinks links={links} />}
+          {/* {links && <Form url={links} />} */}
+            {/* iframSrc are https://forms.office.com links */}
+          {iframeSrc ? (
+            <Form url={iframeSrc} />
+          ) : (
+            /* Conditionally render the list of links */
+            links ? (
+              <>
+                <ListLinks links={links} />
+                <link rel="canonical" href={links} />
+              </>
+            ) : null
+          )}
         </Container>
 
         <Footer />
@@ -205,5 +241,4 @@ const EventDetails = () => {
     </>
   );
 };
-
 export default EventDetails;
