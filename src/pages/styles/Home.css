@@ -26,6 +26,10 @@
   margin-top: 4rem;
 }
 
+.left{
+  align-items: flex-start;
+}
+
 .button {
   background-color: #008E46;
   border: none;
@@ -42,7 +46,6 @@
   -ms-border-radius: 1rem;
   -o-border-radius: 1rem;
 }
-
 /* Desktop View */
 @media screen and (min-width: 720px) {
   .home-logo {
