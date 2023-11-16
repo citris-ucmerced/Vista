@@ -34,13 +34,13 @@ const Events = () => {
         month: "long",
         year: "numeric",
       });
-
-      if (item.start >= currentDate) {
+      //checks if the event if is later in the year or the same day
+      if (item.start >= currentDate || item.start.toDateString() === currentDate.toDateString()) {
         if (!acc[monthAndYear]) {
           acc[monthAndYear] = [];
         }
         acc[monthAndYear].push(item);
-        acc[monthAndYear].sort((a, b) => a.start.getDate() - b.start.getDate()); // sort days in ascending order
+        acc[monthAndYear].sort((a, b) => a.start.getDate() - b.start.getDate());
       }
 
       return acc;
