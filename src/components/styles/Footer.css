@@ -44,3 +44,15 @@
   color: #8b9790;
   padding: 0.75em 2em 0.75em 2em;
 }
+.home:hover {
+  color: #daa900;
+  /* background-color: #daa900; */
+}
+.instagram:hover {
+  color: #daa900;
+  /* background-color: #daa900; */
+}
+.email:hover {
+  color: #daa900;
+  /* background-color: #daa900; */
+}
