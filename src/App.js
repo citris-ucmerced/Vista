@@ -11,6 +11,8 @@ import EventDetails from "./pages/EventDetails.js";
 import News from "./pages/News.js";
 import NotFound from "./pages/NotFound.js";
 import NewsDetail from "./components/NewsDetail.js";
+import Mission from "./pages/Mission.js";
+
 
 import "./global.css";
 
@@ -21,6 +23,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="contactus" element={<ContactUs />} />
+            <Route path="/Mission" element={<Mission />} />
             <Route path="/people" element={<People />} />
             <Route path="/location" element={<Location />} />
             <Route path="/events" element={<Events />} />
