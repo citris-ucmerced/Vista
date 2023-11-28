@@ -24,7 +24,7 @@ const getRowById = (file, id, setData) => {
     ...config,
     step: (results) => {
       const row = results.data;
-      if(row.id === id){
+      if(row.urlSafeTitle === id){
         setData(row);
         stopParsing = true
       }

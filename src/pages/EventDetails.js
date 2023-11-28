@@ -130,7 +130,6 @@ const ImageCarousel = ({ imageFiles }) => {
 const EventDetails = () => {
   // Get the id parameter from the URL
   const { id } = useParams();
-
   // State to hold the event data
   const [event, setEvent] = useState({});
 
@@ -159,7 +158,7 @@ const EventDetails = () => {
   const subtitle = ` ${location} @ ${time} on ${start}`;
 
   // Render the event details page
-  console.log('Flyer Cover File:', event);
+  // console.log('Flyer Cover File:', event);
   return (
     <>
       <Helmet>

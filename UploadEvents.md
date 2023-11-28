@@ -25,6 +25,8 @@ The CSV file should have the following headers(Underlined columns are required):
 
 - <ins>description</ins>: Detailed description of event.
 
+- <ins>urlSafeTitle</ins>: Remove any special characters and replace spaces with "-".
+
 - tags: Static tags to be added to event.
 
 - coverImageFile: Image file that will show up next to event in Events page. Upload image into `public/images/events` and place name of file in this column. For example, if you have a file named `group_photo_potluck_2023.jpg`, then you would upload the file to the `public/images/events` folder and then specify the file (`group_photo_potluck_2023.jpg`) in this column. If no file is given, then a default image is used, which is also located in that same folder.

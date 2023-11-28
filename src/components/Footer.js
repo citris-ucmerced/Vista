@@ -46,7 +46,7 @@ const Footer = () => {
           className="footer-icons"
         >
           {/* Home button */}
-          <a
+          <a class="home"
             href="/"
             rel="noopener noreferrer"
             aria-label="Footer Home Button"
@@ -56,6 +56,7 @@ const Footer = () => {
           </a>
           {/* Instagram button */}
           <a
+            class="instagram"
             href="https://www.instagram.com/vista.ucmerced/"
             target="_blank"
             rel="noopener noreferrer"
@@ -66,6 +67,7 @@ const Footer = () => {
           </a>
           {/* Email button */}
           <a
+            class="email"
             href="mailto:vista.ucmerced@gmail.com"
             target="_blank"
             rel="noopener noreferrer"

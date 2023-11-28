@@ -115,10 +115,12 @@ const EventCard = ({ event }) => {
     time,
     tags,
     coverImageFile,
+    urlSafeTitle,
   } = event;
 
   const tagsArr = tags.split(",").map((tag) => tag.toUpperCase());
   const url = `/events/${id}`;
+  const urlSafe = `/events/${urlSafeTitle}`;
 
   const [image, setImage] = useState(`./images/events/${coverImageFile}`);
 
@@ -150,7 +152,7 @@ const EventCard = ({ event }) => {
         direction="column"
       >
         {/* Event title */}
-        <a href={url} className="event-title" style={{ marginBottom: "10px" }}>
+        <a href={urlSafe} className="event-title" style={{ marginBottom: "10px" }}>
           <Typography variant="h6" component="h1" fontWeight="700">
             {title}
           </Typography>
@@ -204,7 +206,7 @@ const EventCard = ({ event }) => {
         <Box
           component="img"
           className="event-image"
-          href={url}
+          href={urlSafe}
           alt="event image"
           src={image}
           onError={handleImageError}

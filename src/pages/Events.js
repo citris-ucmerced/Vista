@@ -57,8 +57,9 @@ const Events = () => {
           acc[monthAndYear] = [];
         }
         acc[monthAndYear].push(item);
-        acc[monthAndYear].sort((a, b) => b.start.getDate() - a.start.getDate()); // sort days in descending order for past events
+        // acc[monthAndYear].sort((a, b) => b.start.getDate() - a.start.getDate()).reverse(); // sort days in descending order for past events
       }
+
 
       return acc;
     }, {});
@@ -122,7 +123,7 @@ const Events = () => {
             Past Events
           </Typography>
           {Object.keys(pastEvents).length === 0 ? (
-            <Typography               variant="h6"
+            <Typography variant="h6"
             component="h1"
             align="center"
             fontWeight="bold"
@@ -131,7 +132,9 @@ const Events = () => {
             >There are currently no past events.</Typography>
           ) : (
             <>
-          {Object.entries(pastEvents).map(([monthAndYear, events]) => (
+          {Object.entries(pastEvents)
+          .reverse()
+          .map(([monthAndYear, events]) => (
             <Grid container key={monthAndYear} sx={{ marginBottom: "2rem" }}>
               <Grid item xs={12} className="section">
                 <Typography variant="h6" sx={{ width: "fit-content" }}>
