@@ -34,7 +34,9 @@ const Mission = () => {
         <Container>
             <Typography variant="h5" fontWeight="bold">
                 Mission
-                
+            </Typography>
+            <Typography>
+                The Valley Institute for Sustainability, Technology, and Agriculture. 
             </Typography>
 
             {/* <Typography variant="h5" fontWeight="bold">
@@ -64,7 +66,7 @@ const Mission = () => {
                   </Grid>
                   <Grid item sm="auto" md={6}>
                       <p className="indentText">F3 Innovate is the nation’s hub for climate-smart agrifood technology and engineering. With access to federal and state backing, test sites, and research labs, F3 Innovate is equipped to design and support the next generation of engineering solutions for sustainable food production around the world.</p>
-                    <a className="link center" href="https://f3.ucmerced.edu/Mission">Vist F3 Stie</a>
+                    <a className="link center" href="https://f3.ucmerced.edu/Mission">Vist F3 Site</a>
                   </Grid>
 
                   {/* SWF */}
@@ -102,11 +104,11 @@ const Mission = () => {
                       />
                     </Typography>
                   </Grid>
-
                   <Grid item sm="auto" md={6}>
                       <p>CITRIS is a fully-functioning research unit with the University of California, Merced and is recognized as one of the four CITRIS campuses: UC Merced, UC Berkeley, UC Davis, and UC Santa Cruz. CITRIS develops synergistic partnerships with academic institutions and corporate collaborators worldwide to collectively produce innovative solutions to challenges in four primary sectors.</p>
-                      <a className="link" href="https://securewaterfuture.net/swf">Vist SWF Site</a>
+                      <a className="link" href="https://securewaterfuture.net/swf">Vist CITRIS Site</a>
                   </Grid>
+                  
           </Grid>
         </Container>
         {/* Footer component */}

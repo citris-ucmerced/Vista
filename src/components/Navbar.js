@@ -25,6 +25,10 @@ const Navbar = () => {
       icon: FaUsers,
       sublinks: [
         {
+          name: "Mission",
+          route: "/Mission",
+        },
+        {
           name: "People",
           route: "/people",
         },
