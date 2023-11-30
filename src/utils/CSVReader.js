@@ -16,30 +16,6 @@ const readCSV = (file, setData) => {
   });
 };
 
-const getRowById = (file, id, setData) => {
-
-  let stopParsing = false;
-
-  Papa.parse(file, {
-    ...config,
-    step: (results) => {
-      const row = results.data;
-      if(row.urlSafeTitle === id){
-        setData(row);
-        stopParsing = true
-      }
-
-      if (stopParsing){
-        return;
-      }
-    }
-  });
-
-  return () => {
-    stopParsing = true;
-  }
-};
-
 const getRowByTitle = (file, slug, setData) => {
   let stopParsing = false;
 
@@ -71,6 +47,29 @@ const getRowByTitle = (file, slug, setData) => {
   };
 };
 
+const getRowById = (file, id, setData) => {
+
+  let stopParsing = false;
+
+  Papa.parse(file, {
+    ...config,
+    step: (results) => {
+      const row = results.data;
+      if(row.urlSafeTitle === id){
+        setData(row);
+        stopParsing = true
+      }
+
+      if (stopParsing){
+        return;
+      }
+    }
+  });
+
+  return () => {
+    stopParsing = true;
+  }
+};
 
 const readCSVSortedByColumn = (file, catagory, setData)=>{
   const data = {
@@ -96,4 +95,4 @@ const readCSVSortedByColumn = (file, catagory, setData)=>{
   })
 }
 
-export {readCSV, getRowById, readCSVSortedByColumn, getRowByTitle};
+export {readCSV, getRowByTitle, getRowById, readCSVSortedByColumn};
