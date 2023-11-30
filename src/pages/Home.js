@@ -15,35 +15,40 @@ import vistaHomeLogo from "../assets/images/VISTA-Logo-Final-PNG-Color.png";
 
 import "./styles/Home.css"
 
+const toSlug = (title) => {
+  return title.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
+};
+
+
 const Home = () => {
   useEffect(()=>{
     AOS.init({duration: 1500});
   },[]);
 
   const [data, setData] = useState([]);
-  const [newsCards, setNewsCards] = useState([]);
+  // const [newsCards, setNewsCards] = useState([]);
 
   useEffect(() => {
     readCSV(newsCSV, setData);
   }, []);
 
-  useEffect(() => {
-    const newsCardUI = data.map((content) => {
-      return (
-        <NewsCard
-          title={content.title}
-          fileName={content.fileName}
-          link={content.link}
-          description={content.description}
-          date={content.date}
-        />
-      );
-    });
+  let newsCards = data && data.map((content, index) => (
+    <NewsCard
+      key={index}
+      title={content.title}
+      author={content.author}
+      // position={content.position}     
+      fileName={content.fileName}
+      link={`/News/${toSlug(content.title)}`}
+      description={content.description}
+      date={content.date}
+    />
+  ));
 
-    newsCardUI.sort((a, b) => new Date(b.props.date) - new Date(a.props.date));
-
-    setNewsCards(newsCardUI.slice(0, 3));
-  }, [data]);
+    newsCards.sort((a, b) => new Date(b.props.date) - new Date(a.props.date));
+    newsCards = newsCards.slice(0,3);
+    // setNewsCards(newsCardUI.slice(0, 3));
+  // }, [data]);
   return (
     <>
       <Helmet>
