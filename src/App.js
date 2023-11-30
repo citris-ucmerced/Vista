@@ -10,6 +10,8 @@ import Events from "./pages/Events.js";
 import EventDetails from "./pages/EventDetails.js";
 import News from "./pages/News.js";
 import NotFound from "./pages/NotFound.js";
+import NewsDetail from "./components/NewsDetail.js";
+
 
 import "./global.css";
 
@@ -23,8 +25,11 @@ function App() {
             <Route path="/people" element={<People />} />
             <Route path="/location" element={<Location />} />
             <Route path="/events" element={<Events />} />
-            <Route path="/news" element={<News />} />
             <Route path="/events/:id" element={<EventDetails />} />
+            {/* <Route path="/news" element={<News />} /> */}
+            <Route path="/Events/:slug" component={<EventDetails/>} />
+            <Route path="/News" element={<News />} />
+            <Route path="/News/:slug" element={<NewsDetail />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
