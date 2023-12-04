@@ -14,6 +14,12 @@ const toSlug = (title) => {
   return title.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
 };
 
+function previewDescription(description){
+  let truncatedText = description.slice(0, 250);
+  truncatedText = truncatedText + ("... Click to continue reading!")
+  return truncatedText;
+} 
+
 const News = () => {
   const [data, setData] = useState([]);
   // const [newsCards, setNewsCards] = useState([]);
@@ -23,6 +29,7 @@ const News = () => {
   }, []);
 
   const newsCards = data && data.map((content, index) => (
+
     <NewsCard
       key={index}
       title={content.title}
@@ -30,7 +37,7 @@ const News = () => {
       // position={content.position}     
       fileName={content.fileName}
       link={`/News/${toSlug(content.title)}`}
-      description={content.description}
+      description={`${previewDescription(content.description)}`}
       date={content.date}
     />
   ));
