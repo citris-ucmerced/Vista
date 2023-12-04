@@ -26,6 +26,7 @@ const Home = () => {
 
   const [data, setData] = useState([]);
 
+
   useEffect(() => {
     readCSV(newsCSV, setData);
   }, []);
@@ -42,11 +43,11 @@ const Home = () => {
       date={content.date}
     />
   ));
-
+  
     newsCards.sort((a, b) => new Date(b.props.date) - new Date(a.props.date));
-
-    //Gets the three latest news stories
     newsCards = newsCards.slice(0,3);
+    // setNewsCards(newsCardUI.slice(0, 3));
+  // }, [data]);
 
   return (
     <>
