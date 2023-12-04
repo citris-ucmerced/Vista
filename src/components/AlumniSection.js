@@ -34,9 +34,9 @@ const AlumniSection = ({ name, title, description, imageFile }) => {
         <Typography variant="h5" fontWeight="bold">
           {name.toUpperCase()}
         </Typography>
-        <Typography variant="h7" fontWeight="light">
+        {/* <Typography variant="h7" fontWeight="light">
           {title}
-        </Typography>
+        </Typography> */}
       </Grid>
     </Grid>
   );

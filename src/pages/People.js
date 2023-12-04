@@ -9,11 +9,11 @@ import Header from "../components/Header";
 import { readCSV } from "../utils/CSVReader";
 import staffCSV from "../assets/sheets/staff.csv";
 import studentCSV from "../assets/sheets/students.csv";
-// import alumniCSV from "../assets/sheets/alumni.csv";
+import alumniCSV from "../assets/sheets/alumni.csv";
 
 import StaffSection from "../components/StaffSection";
 import StudentSection from "../components/StudentSection";
-// import AlumniSection from "../components/AlumniSection";
+import AlumniSection from "../components/AlumniSection";
 
 import "./styles/People.css"
 
@@ -62,25 +62,25 @@ const People = () => {
     }
   }, [studentData]);
 
-  // const [alumniData, setalumniData] = useState([]);
-  // const [alumnis, setalumnis] = useState([]);
+  const [alumniData, setalumniData] = useState([]);
+  const [alumnis, setalumnis] = useState([]);
 
-  // // Read alumni csv file
-  // useEffect(() => {
-  //   readCSV(alumniCSV, setalumniData);
-  // }, []);
+  // Read alumni csv file
+  useEffect(() => {
+    readCSV(alumniCSV, setalumniData);
+  }, []);
 
-  // useEffect(() => {
-  //   if (alumniData.length > 0) {
-  //     const data = alumniData.map((person) => ({
-  //       name: person.name,
-  //       title: person.title,
-  //       description: person.description,
-  //       imageFile: person.imageFile,
-  //     }));
-  //     setalumnis(data);
-  //   }
-  // }, [alumniData]);
+  useEffect(() => {
+    if (alumniData.length > 0) {
+      const data = alumniData.map((person) => ({
+        name: person.name,
+        title: person.title,
+        description: person.description,
+        imageFile: person.imageFile,
+      }));
+      setalumnis(data);
+    }
+  }, [alumniData]);
 
   return (
     <>
@@ -135,7 +135,7 @@ const People = () => {
               ))}
             </Grid>
           </Box>
-          {/* <Box>
+          <Box>
             <Typography
               variant="h4"
               component="h1"
@@ -157,7 +157,7 @@ const People = () => {
                 />
               ))}
             </Grid>
-          </Box> */}
+          </Box>
         </Container>
         {/* Footer component */}
         <Footer />
