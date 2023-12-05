@@ -13,6 +13,7 @@ import {
 import { Helmet } from "react-helmet-async";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import "./styles/FarmRobotics.css"
 
 const FarmRoboticsChallenge = () => {
   return (
@@ -142,12 +143,12 @@ const FarmRoboticsChallenge = () => {
               Key Milestones
             </Typography>
 
-            <List>
+            <List >
               <ListItem>
                 <ListItemText primary="Competition Opens" secondary="September 19, 2023" />
               </ListItem>
               <ListItem>
-              <ListItemText primary="Team Formation" secondary="December 10, 2023 (if you need help forming a team)" />
+              <ListItemText  primary="Team Formation" secondary="December 10, 2023 (if you need help forming a team)" />
               </ListItem>
 <             ListItem>
               <ListItemText primary="" secondary="December 18, 2023 (if you already formed a team)" />

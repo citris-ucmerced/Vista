@@ -144,7 +144,7 @@ const People = () => {
               gutterBottom
               mb={8}
             >
-              Alumni Staff
+              Alumni 
             </Typography>
             <Grid container spacing={0} direction="row" justifyContent="center">
               {alumnis?.map((person, idx) => (
