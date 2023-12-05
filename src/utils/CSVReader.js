@@ -67,6 +67,7 @@ const getRowById = (file, id, setData) => {
         setData(row);
         stopParsing = true;
       }
+      if(row.description)
 
       if (stopParsing) {
         return;
@@ -78,6 +79,10 @@ const getRowById = (file, id, setData) => {
     stopParsing = true;
   };
 };
+function parseDescription(description) {
+  // Split the description into paragraphs based on the '\n' marker
+  return description.split('\n').map((paragraph) => paragraph.trim());
+}
 
 
 const readCSVSortedByColumn = (file, catagory, setData)=>{
@@ -91,7 +96,10 @@ const readCSVSortedByColumn = (file, catagory, setData)=>{
     ...config,
     step: (results) => {
       const key = results.data[catagory];
-      const value = results.data;
+      const description = results.data['description']; // Assuming 'description' is the column name
+      // const value = results.data;
+      const value = { ...results.data, description: parseDescription(description) };
+
       if(!(data.keys.includes(key))){
         data.keys.push(key);
         data.dataByCategory[key] = [];

@@ -6,3 +6,7 @@
     padding: 1rem;
   }
 }
+.centered-image {
+  display: block; /* Make the image a block element */
+  margin: 0 auto; /* Center the image horizontally */
+}

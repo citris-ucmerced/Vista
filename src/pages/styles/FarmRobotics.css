@@ -1,0 +1,37 @@
+/* EventPage.css */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: whitesmoke;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .time-slot {
+    margin-bottom: 20px;
+  }
+  
+  .time {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .details {
+    margin-left: 20px;
+  }
+  
+  .speaker-bio {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+  }
+  
+  .agenda{
+    background-color: rgb(180, 229, 250);
+    border-radius: 1rem;
+  }

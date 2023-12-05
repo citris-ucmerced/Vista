@@ -19,6 +19,12 @@ const toSlug = (title) => {
   return title.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
 };
 
+function previewDescription(description){
+  let truncatedText = description.slice(0, 250);
+  truncatedText = truncatedText + ("... Click to continue reading!")
+  return truncatedText;
+} 
+
 const Home = () => {
   useEffect(()=>{
     AOS.init({duration: 1500});
@@ -39,7 +45,7 @@ const Home = () => {
       // position={content.position}     
       fileName={content.fileName}
       link={`/News/${toSlug(content.title)}`}
-      description={content.description}
+      description={`${previewDescription(content.description)}`}
       date={content.date}
     />
   ));
