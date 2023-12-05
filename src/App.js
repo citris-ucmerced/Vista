@@ -23,15 +23,14 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="contactus" element={<ContactUs />} />
-            {/* <Route path="/Mission" element={<Mission />} /> */}
             <Route path="/people" element={<People />} />
             <Route path="/location" element={<Location />} />
             <Route path="/farmbotchallenge" element={<FarmRoboticsChallenge />} />
             <Route path="/events" element={<Events />} />
+            <Route path="/events/:id" element={<EventDetails />} />
             <Route path="/Events/:slug" component={<EventDetails/>} />
             <Route path="/News" element={<News />} />
             <Route path="/News/:slug" element={<NewsDetail />} />
-            <Route path="/events/:id" element={<EventDetails />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
