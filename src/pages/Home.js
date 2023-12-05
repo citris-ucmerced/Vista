@@ -25,15 +25,13 @@ function previewDescription(description){
   return truncatedText;
 } 
 
-
-
 const Home = () => {
   useEffect(()=>{
     AOS.init({duration: 1500});
   },[]);
 
   const [data, setData] = useState([]);
-  // const [newsCards, setNewsCards] = useState([]);
+
 
   useEffect(() => {
     readCSV(newsCSV, setData);
@@ -51,11 +49,12 @@ const Home = () => {
       date={content.date}
     />
   ));
-
+  
     newsCards.sort((a, b) => new Date(b.props.date) - new Date(a.props.date));
     newsCards = newsCards.slice(0,3);
     // setNewsCards(newsCardUI.slice(0, 3));
   // }, [data]);
+
   return (
     <>
       <Helmet>

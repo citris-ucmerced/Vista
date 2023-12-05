@@ -17,6 +17,7 @@ const readCSV = (file, setData) => {
 };
 
 const getRowByTitle = (file, slug, setData) => {
+
   let stopParsing = false;
 
   const toSlug = (title) => {
@@ -48,33 +49,41 @@ const getRowByTitle = (file, slug, setData) => {
 
 
 const getRowById = (file, id, setData) => {
-
   let stopParsing = false;
+
+  const toSlug = (title) => {
+    return title
+      .toLowerCase()
+      .replace(/['":,.]/g, '')  
+      .replace(/ /g, '-')       
+      .replace(/[^\w-]+/g, ''); 
+  };
 
   Papa.parse(file, {
     ...config,
     step: (results) => {
       const row = results.data;
-      if(row.urlSafeTitle === id){
+      if (row.title && toSlug(row.title) === slug) {
         setData(row);
-        stopParsing = true
+        stopParsing = true;
       }
       if(row.description)
 
-      if (stopParsing){
+      if (stopParsing) {
         return;
       }
-    }
+    },
   });
 
   return () => {
     stopParsing = true;
-  }
+  };
 };
 function parseDescription(description) {
   // Split the description into paragraphs based on the '\n' marker
   return description.split('\n').map((paragraph) => paragraph.trim());
 }
+
 
 const readCSVSortedByColumn = (file, catagory, setData)=>{
   const data = {
@@ -102,5 +111,6 @@ const readCSVSortedByColumn = (file, catagory, setData)=>{
     },
   })
 }
+
 
 export {readCSV, getRowById, getRowByTitle, readCSVSortedByColumn};
