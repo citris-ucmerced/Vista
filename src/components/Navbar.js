@@ -48,23 +48,12 @@ const Navbar = () => {
           name: "Farm Robotics",
           route: "/farmbotchallenge",
         },
+        {
+          name: "Support Us",
+          route: "https://securelb.imodules.com/s/1650/20/form.aspx?sid=1650&gid=1&pgid=474&cid=1255&dids=342&bledit=1",
+        },
       ],
     },
-    // {
-    //   name: "Events",
-    //   route: "",
-    //   icon: FaUsers,
-    //   sublinks: [
-    //     // {
-    //     //   name: "Events",
-    //     //   route: "/events",
-    //     // },
-    //     // {
-    //     //   name: "Farm Robotics",
-    //     //   route: "/farmbotchallenge",
-    //     // },
-    //   ],
-    // },
     {
       name: "Contact Us",
       route: "/contactus",
