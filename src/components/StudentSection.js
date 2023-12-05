@@ -29,7 +29,7 @@ const StudentSection = ({ name, title, description, imageFile }) => {
         />
       </Grid>
       {/* Student name and title */}
-      <Grid item sx={{ textAlign: "center", "&>*": { padding: "0.5rem" } }}>
+      <Grid item sx={{ textAlign: "", "&>*": { padding: "0.5rem" } }}>
         <Typography variant="h5" fontWeight="bold">
           {name.toUpperCase()}
         </Typography>

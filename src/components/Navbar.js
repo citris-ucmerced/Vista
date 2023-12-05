@@ -40,8 +40,27 @@ const Navbar = () => {
           name: "News",
           route: "/news",
         },
+        {
+          name: "Farm Robotics",
+          route: "/farmbotchallenge",
+        },
       ],
     },
+    // {
+    //   name: "Events",
+    //   route: "",
+    //   icon: FaUsers,
+    //   sublinks: [
+    //     // {
+    //     //   name: "Events",
+    //     //   route: "/events",
+    //     // },
+    //     // {
+    //     //   name: "Farm Robotics",
+    //     //   route: "/farmbotchallenge",
+    //     // },
+    //   ],
+    // },
     {
       name: "Contact Us",
       route: "/contactus",

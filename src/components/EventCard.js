@@ -212,7 +212,7 @@ const EventCard = ({ event }) => {
           onError={handleImageError}
           onClick={(e) => {
             e.preventDefault();
-            window.location.href = url;
+            window.location.href = urlSafe;
           }}
         />
       </Grid>
