@@ -35,3 +35,17 @@
     background-color: rgb(180, 229, 250);
     border-radius: 1rem;
   }
+  .spacing {
+    padding-top: 15px;
+    /* padding-bottom: 10px; */
+  }
+  .bold{
+    font-weight: bold;
+  }
+  .underline{
+    text-decoration: underline;
+    padding-left: 10px;
+  }
+  .italic{
+    font-style: italic;
+  }
