@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.39ad7778.css",
-    "main.js": "/static/js/main.327292ca.js",
+    "main.css": "/static/css/main.7b70d768.css",
+    "main.js": "/static/js/main.180b0ad7.js",
     "static/js/787.2667ce32.chunk.js": "/static/js/787.2667ce32.chunk.js",
     "static/media/acs.jpeg": "/static/media/acs.9fe81be4ad1d75875ca0.jpeg",
     "static/media/logo.png": "/static/media/logo.dc104983539196e01750.png",
     "static/media/news.csv": "/static/media/news.4a7d1a8ec3adaff636d4.csv",
     "static/media/VISTA-Logo-Final-PNG-Color.png": "/static/media/VISTA-Logo-Final-PNG-Color.843c989caf050fbf65ef.png",
-    "static/media/staff.csv": "/static/media/staff.7e55cd1026b1df1225d9.csv",
+    "static/media/staff.csv": "/static/media/staff.270097f45da9b49e2a7f.csv",
     "static/media/events.csv": "/static/media/events.7b8d7d791c4915faa659.csv",
     "index.html": "/index.html",
     "static/media/students.csv": "/static/media/students.3262351dcb2e81980e99.csv",
-    "static/media/alumni.csv": "/static/media/alumni.99e31797225104a069a9.csv",
-    "main.39ad7778.css.map": "/static/css/main.39ad7778.css.map",
-    "main.327292ca.js.map": "/static/js/main.327292ca.js.map",
+    "static/media/alumni.csv": "/static/media/alumni.b8648e9c1a37d18f6703.csv",
+    "main.7b70d768.css.map": "/static/css/main.7b70d768.css.map",
+    "main.180b0ad7.js.map": "/static/js/main.180b0ad7.js.map",
     "787.2667ce32.chunk.js.map": "/static/js/787.2667ce32.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.39ad7778.css",
-    "static/js/main.327292ca.js"
+    "static/css/main.7b70d768.css",
+    "static/js/main.180b0ad7.js"
   ]
 }
