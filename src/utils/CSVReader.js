@@ -7,6 +7,15 @@ const config = {
   skipEmptyLines: true,
 };
 
+const displayWithParagraphs = (text) => {
+  return text.split('\n').map((paragraph, index) => (
+    <p key={index} className="paragraph">{paragraph}</p>
+  ));
+};
+
+
+export default displayWithParagraphs;
+
 const readCSV = (file, setData) => {
   Papa.parse(file, {
     ...config,

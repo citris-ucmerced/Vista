@@ -5,7 +5,9 @@ import Footer from '../components/Footer.js';
 import newsCSV from '../assets/sheets/news.csv';
 import './styles/NewsDetail.css';
 import { getRowByTitle } from '../utils/CSVReader.js';
-
+import displayWithParagraphs from '../utils/CSVReader.js';
+import { Grid, Typography, Box } from "@mui/material";
+        
 const NewsDetail = () => {
   const { slug } = useParams(); // Retrieve the slug from URL
   const [newsItem, setNewsItem] = useState(null);
@@ -18,16 +20,30 @@ const NewsDetail = () => {
   if (!newsItem) {
     return <div>Loading news details...</div>;
   }
-
+  const image = "../images/news/" + newsItem.fileName;
+  // console.log(image)
   return (
     <>
       <Navbar />
       <div className="page">
         <div className='news-detail'>
           <h1 className='detail-title'>{newsItem.title}</h1>
-          <h3 className='detail-author-name'>Author: {newsItem.author}</h3>
-          <h3 className='detail-author-position'>{newsItem.position}</h3>
-          <p className='detail-description'>{newsItem.description}</p>
+          <Box
+          component="img"
+          sx={{
+            maxHeight: "50%",
+            maxWidth: "50%",
+            borderRadius: "1rem",
+            alignContent: "center"
+          }}
+          alt={newsItem.title}
+          src={image}
+          alignItems="center"
+        />
+          <h3 className='detail-author-name'> By: {newsItem.author}, {newsItem.position}</h3>
+          <h3 className='detail-author-date'>{newsItem.date}</h3>
+          <p className='detail-description'>{displayWithParagraphs(newsItem.description)}</p>
+
         </div>
       </div>
       <Footer />
