@@ -16,20 +16,21 @@ const StudentSection = ({ name, title, description, imageFile }) => {
       alignContent="center"
     >
       {/* Student image */}
-      <Grid item>
+      <Grid item sx={{ textAlign: "center", "&>*": { padding: ".5rem" } }}>
         <Box
           component="img"
           sx={{
-            maxHeight: "12rem",
-            maxWidth: "12rem",
+            height: "192px",
+            width: "192px",
             borderRadius: "1rem",
+            // alignContent: "center"
           }}
           alt={name}
           src={image}
         />
       </Grid>
       {/* Student name and title */}
-      <Grid item sx={{ textAlign: "", "&>*": { padding: "0.5rem" } }}>
+      <Grid item sx={{ textAlign: "center", "&>*": { padding: "0.5rem" } }}>
         <Typography variant="h5" fontWeight="bold">
           {name.toUpperCase()}
         </Typography>

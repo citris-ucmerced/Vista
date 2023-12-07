@@ -1,70 +1,79 @@
 .news-detail {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 5%;
+  margin-left: 8%;
+  margin-right: 8%;
+  /* background: white; */
+  border-radius: 30px;
+}
+
+
+.detail-title {
+  color: #f6f3f3; /* Dark color for the title */
+  font-size: 2.5rem; /* Larger font size for the title */
+  margin-bottom: 5px;
+  text-align: center; /* Center align the title */
+  padding: 15px;
+  border-radius: 8px; /* Rounded corners */
+  margin: 20px auto; /* Center align the card */
+  overflow-y: auto; /* Allow vertical scrolling */
+  height: auto; /* Adjust height automatically */
+  line-height: 1.6; /* Improve readability */
+}
+
+.detail-author-name, .detail-author-position, .detail-author-date {
+  text-align: center; /* Center align author details */
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 20px;
+  color:#aeb4b1;
+  
+}
+
+
+.detail-description {
+  padding: 15px;
+  border-radius: 8px; /* Rounded corners */
+  max-width: 90%; /* Limit width for readability */
+  margin: 20px auto; /* Center align the card */
+  overflow-y: auto; /* Allow vertical scrolling */
+  height: auto; /* Adjust height automatically */
+  line-height: 1.6; /* Improve readability */
+  font-size: 16px; /* Increase font size for body text */
+}
+
+.paragraph {
+  margin-bottom: 1em; /* Adjust as needed for spacing */
+  font-size: 18px;
+}
+
+.detail-description::-webkit-scrollbar-thumb {
+  background-color: #ccc; /* Light grey scrollbar */
+  border-radius: 10px;
+}
+
+.detail-description::-webkit-scrollbar-track {
+  background-color: #f4f4f4;
+}
+
+
+.detail-image {
+  max-width: 100%; /* Ensure it doesn't overflow its container */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px; /* Space below the image */
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+  .detail-description {
+    padding: 10px;
+    font-size: 16px;
   }
 
   .detail-title {
-    color: white; /* Dark color for the title */
-    font-size: 2.5rem; /* Larger font size for the title */
-    margin-bottom: 10px;
-    text-align: center; /* Center align the title */
-    font-weight: bold;
+    font-size: 2rem;
   }
-
-  .detail-author-name, .detail-author-position {
-    text-align: center; /* Center align author details */
-    margin-bottom: 5px;
-  }
-
-  .detail-author-position{
-    color:#c1cac5;
-
-  }
-
-  .detail-description {
-    padding: 15px;
-    border-radius: 8px; /* Rounded corners */
-    max-width: 800px; /* Limit width for readability */
-    margin: 20px auto; /* Center align the card */
-    overflow-y: auto; /* Allow vertical scrolling */
-    height: auto; /* Adjust height automatically */
-    line-height: 1.6; /* Improve readability */
-    font-size: 18px; /* Increase font size for body text */
-  }
-
-
-
-  .detail-description::-webkit-scrollbar-thumb {
-    background-color: #ccc; /* Light grey scrollbar */
-    border-radius: 10px;
-  }
-
-  .detail-description::-webkit-scrollbar-track {
-    background-color: #f4f4f4;
-  }
-
-  /* Hover effects for interactive elements */
-  .detail-author-name:hover, .news-link:hover {
-    color: #007bff; /* Blue color on hover for links */
-    cursor: pointer;
-  }
-  .detail-image {
-    max-width: 100%; /* Ensure it doesn't overflow its container */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 20px; /* Space below the image */
-  }
-
-  /* Responsive design for smaller screens */
-  @media screen and (max-width: 768px) {
-    .detail-description {
-      padding: 10px;
-      font-size: 16px;
-    }
-
-    .detail-title {
-      font-size: 2rem;
-    }
-  }
+}
