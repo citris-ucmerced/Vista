@@ -20,8 +20,8 @@ const toSlug = (title) => {
 };
 
 function previewDescription(description){
-  let truncatedText = description.slice(0, 250);
-  truncatedText = truncatedText + ("... Click to continue reading!")
+  let truncatedText = description.slice(0, 300) + ("...");
+  truncatedText = truncatedText
   return truncatedText;
 } 
 
