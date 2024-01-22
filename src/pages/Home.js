@@ -67,7 +67,6 @@ const Home = () => {
         <Navbar />
         <Grid container direction="row" className="home-banner">
           <Grid item className="home-logo" xs={12} data-aos="zoom-in">
-            <img src={vistaHomeLogo} alt="Vista Logo" />
           </Grid>
           <Grid item xs={12} >
             <Typography
