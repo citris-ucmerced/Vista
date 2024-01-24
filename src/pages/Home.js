@@ -20,8 +20,8 @@ const toSlug = (title) => {
 };
 
 function previewDescription(description){
-  let truncatedText = description.slice(0, 250);
-  truncatedText = truncatedText + ("... Click to continue reading!")
+  let truncatedText = description.slice(0, 300) + ("...");
+  truncatedText = truncatedText
   return truncatedText;
 } 
 
@@ -67,9 +67,8 @@ const Home = () => {
         <Navbar />
         <Grid container direction="row" className="home-banner">
           <Grid item className="home-logo" xs={12} data-aos="zoom-in">
-            <img src={vistaHomeLogo} alt="Vista Logo" />
           </Grid>
-          <Grid item xs={12}>
+          <Grid item xs={12} >
             <Typography
               className="home-subtitle"
               component="p"
