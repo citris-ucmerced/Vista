@@ -133,7 +133,7 @@ const FarmRoboticsChallenge = () => {
   
               <Typography variant="body1" gutterBottom>
 
-                <span className='spacing-left'></span><span className='grandprize italic'>Grand prize</span> of<span className='grandprize bold italic'>$10,0000</span> for the team!
+                <span className='spacing-left'></span><span className='grandprize italic'>Grand prize</span> of<span className='grandprize bold italic'>$10,000</span> for the team!
               </Typography>
 
               <Typography variant="body1" className='bold' gutterBottom>
