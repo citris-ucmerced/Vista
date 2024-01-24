@@ -126,7 +126,16 @@ const FarmRoboticsChallenge = () => {
               <Typography variant="body1" gutterBottom>
                 The Farm Robotics Challenge isn't just about innovation and learning; it's also about rewarding your hard work and creativity. We have an array of prizes designed to recognize excellence in various aspects of the competition.
               </Typography>
+
+              <Typography variant="body1" className='bold' gutterBottom>
+                CHALLENGE GRAND PRIZE:
+              </Typography>
   
+              <Typography variant="body1" gutterBottom>
+
+                <span className='spacing-left'></span><span className='grandprize italic'>Grand prize</span> of<span className='grandprize bold italic'>$10,0000</span> for the team!
+              </Typography>
+
               <Typography variant="body1" className='bold' gutterBottom>
                 Categories of Awards:
               </Typography>
@@ -176,7 +185,7 @@ const FarmRoboticsChallenge = () => {
               <ListItemText  
                 className='italic' 
                 primary="Team Formation"
-                secondary="December 10, 2023 (if you need help forming a team)" 
+                secondary="February 12, 2024 (if you need help forming a team)" 
                 secondaryTypographyProps={{ style: { color: 'white' } }}
                 />
               </ListItem>
@@ -192,7 +201,7 @@ const FarmRoboticsChallenge = () => {
                 <ListItemText 
                   className='italic' 
                   primary="Project Proposal Submission" 
-                  secondary="December 18, 2023"
+                  secondary="February 12, 2024"
                   secondaryTypographyProps={{ style: { color: 'white' } }}
                 />
                   

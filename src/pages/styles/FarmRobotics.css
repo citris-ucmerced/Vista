@@ -49,3 +49,11 @@
   .italic{
     font-style: italic;
   }
+  .grandprize{
+    /* text-decoration: underline; */
+    font-size: large;
+    /* padding-left: 10px; */
+  }
+  .spacing-left{
+    padding-left: 10px;
+  }
