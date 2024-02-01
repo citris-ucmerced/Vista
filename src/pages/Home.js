@@ -15,8 +15,11 @@ import vistaHomeLogo from "../assets/images/VISTA-Logo-Final-PNG-Color.png";
 
 import "./styles/Home.css"
 
-const toSlug = (title) => {
-  return title.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
+const toSlug = (title, content) => {
+  if(content.link.length !== 0){
+    return content.link;
+  }
+  return "/News/" + title.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
 };
 
 function previewDescription(description){
@@ -44,7 +47,7 @@ const Home = () => {
       author={content.author}
       // position={content.position}     
       fileName={content.fileName}
-      link={`/News/${toSlug(content.title)}`}
+      link={`${toSlug(content.title, content)}`}
       description={`${previewDescription(content.description)}`}
       date={content.date}
     />
