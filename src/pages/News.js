@@ -10,8 +10,11 @@ import Footer from "../components/Footer.js";
 
 import "./styles/News.css"
 
-const toSlug = (title) => {
-  return title.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
+const toSlug = (title, content) => {
+  if(content.link.length !== 0){
+    return content.link;
+  }
+  return "/News/" + title.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
 };
 
 function previewDescription(description){
@@ -36,7 +39,7 @@ const News = () => {
       author={content.author}
       // position={content.position}     
       fileName={content.fileName}
-      link={`/News/${toSlug(content.title)}`}
+      link={`${toSlug(content.title, content)}`}
       description={`${previewDescription(content.description)}`}
       date={content.date}
     />
