@@ -1,9 +1,15 @@
 import { Grid, Typography, Box } from "@mui/material";
 
-const StaffSection = ({ name, title, description, imageFile }) => {
+function addEmail(email){
+  if(email.length > 0){
+    return "Contact: " + email;
+  }
+}
+
+const StaffSection = ({ name, title, email, description, imageFile }) => {
   // Construct the image path
   const image = "./images/people/" + imageFile;
-
+  
   return (
     <Grid container spacing={2} mb={4} className="center">
       {/* Staff member name */}
@@ -15,6 +21,9 @@ const StaffSection = ({ name, title, description, imageFile }) => {
       {/* Staff member title */}
       <Grid item xs={12}>
         <Typography>{title}</Typography>
+      </Grid>
+      <Grid item xs={12}>
+        <Typography></Typography>
       </Grid>
       {/* Staff member image and description */}
       <Grid item container xs={12} lg="column" md="row">
@@ -34,7 +43,12 @@ const StaffSection = ({ name, title, description, imageFile }) => {
         {/* Staff member description */}
         <Grid item sm={8} lg={10} mb={2}>
           <Box>
-            <Typography className="description" sx={{paddingX: "1rem"}}>{description}</Typography>
+            <Typography className="description" sx={{paddingX: "1rem"}}>{description}
+            <br></br> <br></br>
+            {/* {email} */}
+            {addEmail(email)}
+            </Typography>
+             
           </Box>
         </Grid>
       </Grid>
