@@ -33,6 +33,7 @@ const People = () => {
       const data = staffData.map((person) => ({
         name: person.name,
         title: person.title,
+        email: person.email,
         description: person.description,
         imageFile: person.imageFile,
       }));
@@ -105,6 +106,7 @@ const People = () => {
                 key={idx}
                 name={person.name}
                 title={person.title}
+                email={person.email}
                 description={person.description}
                 imageFile={person.imageFile}
               />
