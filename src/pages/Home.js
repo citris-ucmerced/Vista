@@ -11,9 +11,9 @@ import Footer from "../components/Footer";
 import NewsCard from "../components/NewsCard.js";
 import newsCSV from "../assets/sheets/news.csv";
 
-// import vistaHomeLogo from "../assets/images/VISTA-Logo-Final-PNG-Color.png";
-
 import "./styles/Home.css"
+
+
 
 const toSlug = (title, content) => {
   if(content.link.length !== 0){
@@ -24,7 +24,6 @@ const toSlug = (title, content) => {
 
 function previewDescription(description){
   let truncatedText = description.slice(0, 300) + ("...");
-  // truncatedText = truncatedText
   return truncatedText;
 } 
 
@@ -55,8 +54,6 @@ const Home = () => {
   
     newsCards.sort((a, b) => new Date(b.props.date) - new Date(a.props.date));
     newsCards = newsCards.slice(0,3);
-    // setNewsCards(newsCardUI.slice(0, 3));
-  // }, [data]);
 
   return (
     <>
