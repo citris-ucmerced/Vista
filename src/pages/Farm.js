@@ -2,7 +2,7 @@
 
 const Farm = () => {
 	//this.props.history.push("https://ucm-vista.dream.press");
-	return(<><div><meta http-equiv="Refresh" Content="0; url=https://ucm-vista.dream.press" /></div></>);
+	return(<><div><meta http-equiv="Refresh" Content="0; url=https://ucmsmartfarm.org" /></div></>);
 };
 
 export default Farm;
