@@ -12,6 +12,7 @@ import News from "./pages/News.js";
 import NotFound from "./pages/NotFound.js";
 import NewsDetail from "./components/NewsDetail.js";
 import FarmRoboticsChallenge from "./pages/FarmBotChallenge.js";
+import Farm from "./pages/Farm.js";
 
 
 import "./global.css";
@@ -31,6 +32,7 @@ function App() {
             <Route path="/Events/:slug" component={<EventDetails/>} />
             <Route path="/News" element={<News />} />
             <Route path="/News/:slug" element={<NewsDetail />} />
+            <Route path="/farm" element={<Farm />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
