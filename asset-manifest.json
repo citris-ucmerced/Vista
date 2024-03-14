@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/static/css/main.af0220d4.css",
-    "main.js": "/static/js/main.f1ddec1a.js",
+    "main.js": "/static/js/main.3ebb3650.js",
     "static/js/787.2667ce32.chunk.js": "/static/js/787.2667ce32.chunk.js",
     "static/media/acs.jpeg": "/static/media/acs.9fe81be4ad1d75875ca0.jpeg",
-    "static/media/news.csv": "/static/media/news.ecacf846fcec8e8f072d.csv",
+    "static/media/news.csv": "/static/media/news.a1de6eb09709f251c172.csv",
     "static/media/logo.png": "/static/media/logo.dc104983539196e01750.png",
     "static/media/VISTA-Logo-Final-PNG-Color.png": "/static/media/VISTA-Logo-Final-PNG-Color.843c989caf050fbf65ef.png",
     "static/media/staff.csv": "/static/media/staff.f52589913d23607887c1.csv",
@@ -13,11 +13,11 @@
     "static/media/students.csv": "/static/media/students.b13c1d70a72427fcec30.csv",
     "static/media/alumni.csv": "/static/media/alumni.08bf12b06839bcf7aa6e.csv",
     "main.af0220d4.css.map": "/static/css/main.af0220d4.css.map",
-    "main.f1ddec1a.js.map": "/static/js/main.f1ddec1a.js.map",
+    "main.3ebb3650.js.map": "/static/js/main.3ebb3650.js.map",
     "787.2667ce32.chunk.js.map": "/static/js/787.2667ce32.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.af0220d4.css",
-    "static/js/main.f1ddec1a.js"
+    "static/js/main.3ebb3650.js"
   ]
 }
